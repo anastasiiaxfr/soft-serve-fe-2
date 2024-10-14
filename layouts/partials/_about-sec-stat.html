@@ -1,0 +1,22 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ if $data.aboutpage.section_stat }}
+{{ with $data.aboutpage.section_stat }}
+    <section class="section section--stat">
+        <div class="">
+            <div class="timelines">
+                {{ range .items }}
+                    <article class="timeline">
+                        <div class="timeline__title">
+                            {{ .year }}
+                        </div>
+                        <hr class="timeline__divider">
+                        <div class="timeline__content">
+                            {{ .desc }}
+                        </div>
+                    </article>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,52 @@
+<!-- BEGIN lang-switcher -->
+{{ if .IsTranslated }}
+
+<nav class="dropdown lang-switcher">
+    {{ $siteLanguages := .Site.Languages}} {{ $pageLang := .Page.Lang}}
+
+    <button class="lang-btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    {{ range $siteLanguages }} {{ if eq $pageLang .Lang}}
+    <svg class="icon" width="20" height="20">
+      <use xlink:href="#lang"></use>
+    </svg>
+    <span> {{ .LanguageName }} </span>
+    {{ end }} {{ end }}
+  </button>
+
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        {{ range .Page.AllTranslations }} {{ $translation := .}} {{ range $siteLanguages }} {{ if eq $translation.Lang .Lang }} {{ $selected := false }} {{ if eq $pageLang .Lang}}
+
+        <li>
+            <button class="" id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" onClick="location = this.value;">
+        {{ .LanguageName }}
+      </button>
+        </li>
+
+        {{ else }}
+        <li>
+            <button class="" id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" onClick="location = this.value;">
+        {{ .LanguageName }}
+      </button>
+        </li>
+
+        {{ end }} {{ end }} {{ end }} {{ end }}
+    </ul>
+</nav>
+
+<script>
+    const dd_toggle = document.querySelector(".dropdown-toggle");
+    const dd_menu = document.querySelector(".dropdown-menu");
+
+    dd_toggle.addEventListener('click', function() {
+        dd_menu.classList.toggle('d-block');
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!dd_menu.contains(e.target) && !dd_toggle.contains(e.target)) {
+            dd_menu.classList.remove('d-block');
+        }
+    });
+</script>
+
+{{ end }}
+<!-- END lang-switcher -->

@@ -1,0 +1,29 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.section_features_gallery }}
+{{ with $data.homepage.section_features_gallery }}
+<section class="section section--features-gallery">
+        
+        <div class="gallery gallery--1">
+            {{ range .gallery }}
+                <figure class="gallery__item">
+                    <div class="gellry__item-img">
+                        <img src="{{ .img | relURL }}" alt="ALT">
+                    </div>
+                    <figcaption class="gallery__item-overlay">
+                       <hgroup>
+                        <h3 class="gallery__item-title">
+                            {{ .title }}
+                        </h3>
+                        <p>
+                            {{ .desc }}
+                        </p>
+                       </hgroup>
+                    </figcaption>
+                </figure>
+            {{ end }}
+        </div>
+      
+</section>
+{{ end }}
+{{ end }}

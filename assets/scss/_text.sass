@@ -1,0 +1,120 @@
+h1, .h1
+    +ft(76, 76*1.2, 600)
+    margin-top: $gap2
+    +maw($lg)
+        font-size: 55px
+    +maw($md)
+        font-size: 45px
+    +maw($xs)
+        font-size: 40px
+       
+   
+h2, .h2
+    +ft(62, 62*1.2, 600)
+    margin-bottom: $gap3
+    margin-top: 0
+    +maw($lg)
+        +ft(42, 42*1.4, 600)
+    +maw($md)
+        +ft(38, 38*1.4, 600)
+    +maw($sm)
+        +ft(34, 34*1.4, 600)
+    +maw($xs)
+        +ft(28, 28*1.4, 600)
+  
+h3, .h3
+    +ft(36, 36*1.4, 500)
+    margin-top: 0
+    +maw($md)
+        +ft(24, 24*1.4, 500)
+      
+h4, .h4
+    +ft(26, 26*1.4, 500)
+    +maw($md)
+        +ft(18, 18*1.4, 500)
+
+h1, h2, h3, h4, h5, h6
+    font-family: $ffHeading
+   
+.subtitle
+    margin-top: 0
+    margin-bottom: $gap1
+    text-transform: uppercase
+    letter-spacing: 0.2em
+    +ft(12, 12, 500)
+    color: $main
+
+.lead
+    +ft(20, 20*1.2, 500)
+    opacity: 0.8
+
+.text
+    &--center
+        text-align: center
+    &--main
+        color: $main
+    &--note
+        color: lighten($main, 20%)
+        display: inline-flex
+        align-items: center
+        gap: $gap1
+        svg
+            color: $main
+    &--lg
+        @extend .h3
+        
+
+.check
+    padding: 0
+    margin: $gap4 auto
+    li
+        position: relative
+        +flex(flex, center, flex-start, nowrap)
+        gap: $gap2
+        margin-top: $gap1
+        margin-bottom: $gap1
+        span
+            opacity: 0.7
+        &::before
+            content: ''
+            +sz(20px, 20px)
+            min-width: 20px
+            background: url('../images/icon/check.svg') no-repeat 50% / contain
+
+
+.breadcrumbs
+    list-style-type: none
+    +flex(flex, center, center, wrap)
+    gap: $gap1
+    margin: 0
+    &__item 
+        +ft(14, 14, 500)
+        text-transform: uppercase
+        letter-spacing: 0.1em
+        color: rgba($white, 0.6)
+        &--active
+            text-decoration: underline
+            color: $white
+
+.cite
+    display: grid
+    grid-template-columns: 0.75fr 2fr
+    align-items: center
+    gap: $gap4
+    &__ava
+        img
+            display: block
+            +sz(200px, auto)
+            border-radius: 50%
+            object-fit: cover
+    &__desc
+        +ft(24, 24*1.2, 500)
+        font-style: italic
+        margin-bottom: $gap4
+    &__info
+        text-transform: capitalize
+        text-align: right
+    +maw($md)
+        grid-template-columns: 1fr
+        &__info
+            text-align: left

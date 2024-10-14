@@ -1,0 +1,81 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+
+<section class="section section--catalog">
+    {{ if $data.homepage.section_catalog }}
+    {{ with $data.homepage.section_catalog }}
+    <div class="container">
+        <div class="row row--1">
+            <div>
+                <hgroup>
+                    <h2 class="subtitle">{{ .suptitle }}</h2>
+                    <p class="h2">{{ .title }}</p>
+                    <p class="lead">{{ .subtitle }}</p>
+                </hgroup>
+                <a href="#" class="btn">
+                    <b><span>{{ .btn.label }}</span><span>{{ .btn.label }}</span></b>
+                </a>
+            </div>
+            <div>
+                <div class="catalogs">
+                    {{ range .catalog }}
+                    <article class="catalog">
+                        <h3 class="catalog__title">
+                            {{ .title }}
+                        </h3>
+                        <div class="catalog__desc">
+                            {{ .desc }}
+                        </div>
+                        <a href="#" class="btn--link">
+                            <svg class="icon" width="24" height="24">
+                                <use xlink:href="#pdf"></use>
+                            </svg>
+                            <small>{{ .btn.label }}</small>
+                        </a>
+                    </article>
+                    <hr class="divider">
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        <hr class="divider my-8">
+
+        <div class="slides embla">
+            <div class="embla__container">
+                {{ range .slides }}
+                <article class="embla__slide">
+                    <div class="slide__img">
+                        <img src="{{ .img | relURL }}" alt="{{ .title }}">
+                    </div>
+                    <div class="slide__content">
+                        <h3 class="slide__title">{{ .title }}</h3>
+                        <div class="slide__cat">{{ .cat }}</div>
+                        <small class="slide__data">{{ .year }}</small>
+                    </div>
+                </article>
+                {{ end }}
+            </div>
+
+            <div class="embla__controls">
+                <div class="embla__buttons">
+                    <button class="embla__button embla__button--prev" type="button">
+                        <svg class="icon" width="24" height="24">
+                            <use xlink:href="#arr-rt"></use>
+                        </svg>
+
+                    </button>
+                    <button class="embla__button embla__button--next" type="button">
+                        <svg class="icon" width="24" height="24">
+                            <use xlink:href="#arr-lt"></use>
+                        </svg>
+                    </button>
+                </div>
+                <!-- <div class="embla__dots"></div> -->
+            </div>
+        </div>
+
+
+    </div>
+    {{ end }}
+    {{ end }}
+</section>

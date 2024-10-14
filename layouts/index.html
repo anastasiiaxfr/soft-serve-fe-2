@@ -1,0 +1,57 @@
+{{ define "main" }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ "<!-- Hero Section -->" | safeHTML }}
+{{ "<!-- End of Hero Section -->" | safeHTML }}
+
+<section class="hero__wrap">
+    {{- partial "header.html" . -}}
+    <!-- BEGIN section -->
+    {{- partial "_hero.html" . -}}
+    <!-- END section -->
+</section>
+<main>
+
+    <!-- BEGIN section -->
+    {{- partial "_home-sec-about.html" . -}}
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_home-sec-features.html" . -}}
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_home-sec-features-gallery.html" . -}}
+    <!-- END section -->
+
+    <div class="bg--2">
+        <!-- BEGIN section -->
+        {{- partial "_home-sec-services.html" . -}}
+        <!-- END section -->
+    </div>
+
+    <!-- BEGIN section -->
+    {{- partial "_home-sec-contacts.html" . -}}
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_home-sec-projects.html" . -}}
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_home-sec-collections.html" . -}}
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_home-sec-catalog.html" . -}}
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_home-sec-news.html" . -}}
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_home-sec-subscribe.html" . -}}
+    <!-- END section -->
+</main>
+{{ end }}

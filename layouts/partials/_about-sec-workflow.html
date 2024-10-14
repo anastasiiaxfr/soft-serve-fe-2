@@ -1,0 +1,42 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ if $data.aboutpage.section_workflow }}
+{{ with $data.aboutpage.section_workflow }}
+    <section class="section section--workflow">
+        <div class="container text--center">
+
+            <hgroup>
+                <h2 class="subtitle">{{ .suptitle }}</h2>
+                <p class="h2">{{ .title }}</p>
+                <p class="lead">{{ .subtitle }}</p>
+            </hgroup>
+
+            <div class="workflows">
+                {{ range .items }}
+                    <article class="workflow">
+                        <div class="workflow__icon">
+                            <img src="{{ .icon | relURL }}" alt="{{ .title }}" height="75">
+                        </div>
+                        <div class="workflow__content">
+                            <h3 class="workflow__title">
+                                <b>{{ .num }}</b>/
+                                <span>{{ .title }}</span>
+                            </h3>
+                            <div class="workflow__desc">
+                                {{ .desc }}
+                            </div>
+                            <div>
+                                <a href="#" class="btn--link text--main">
+                                    <small class="">
+                                        Learn more
+                                    </small>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                {{ end }}
+            </div>
+
+        </div>
+    </section>
+{{ end }}
+{{ end }}

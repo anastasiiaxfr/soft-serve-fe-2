@@ -1,0 +1,15 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.section_services_gallery }}
+{{ with $data.homepage.section_services_gallery }}
+<section class="section section--services-gallery">
+    <div class="container">
+        <div class="gallery gallery--2">
+            {{ range .gallery }}
+            <img src="{{ .img | relURL }}" alt="ALT">
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

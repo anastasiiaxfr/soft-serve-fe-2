@@ -1,0 +1,56 @@
+%scroll
+	&::-webkit-scrollbar
+		width: 10px
+		height: 10px
+
+	&::-webkit-scrollbar-track
+		background-color: $black
+
+	&::-webkit-scrollbar-thumb
+		background: $main
+
+html, body 
+	//height: 100%
+	min-height: 100vh
+	font-family: $ffText
+	scroll-behavior: smooth
+	margin: 0
+	padding: 0
+	
+
+body
+	background-color: $white
+	@extend %scroll
+
+
+*
+	//user-select: none
+	box-sizing: border-box
+	&::selection
+		background-color: $main
+		color: $white
+
+
+a
+	text-decoration: none
+	color: inherit
+	&:hover, &:focus
+		text-decoration: none
+		color: $black
+
+img
+	user-select: none
+	max-width: 100%
+
+button, a, input 
+	&:hover, &:active, &:focus
+		appearance: none
+		outline: none
+		box-shadow: none 
+
+.page
+	&__body
+		display: flex
+		flex-direction: column
+	&__wrapper
+		flex: 1 0 auto

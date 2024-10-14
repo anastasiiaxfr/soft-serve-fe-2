@@ -1,0 +1,35 @@
+<article class="project">
+    <a href="{{ .Permalink }}">
+        <div class="project__title">
+            {{ if .Title }}
+            {{ .Title }}
+            {{ end }}
+        </div>
+        <small class="project__public">
+            {{ if .Params.date }}
+            {{ .Params.date }}
+            {{ end }}
+        </small>
+    </a>
+    <div class="project__content">
+        <div class="project__desc">
+            <div>
+                {{ if .Params.desc }}
+                {{ .Params.desc }}
+                {{ end }}
+            </div>
+            <a href="{{ .Permalink }}">
+                <svg class="icon" width="48" height="48">
+                    <use xlink:href="#arr-r"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="project__gallery">
+            {{ if .Params.imgs }}
+            {{ range .Params.imgs }}
+            <img src="{{ .img | relURL }}" alt="{{ .Title }}">
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</article>

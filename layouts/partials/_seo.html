@@ -1,0 +1,58 @@
+
+<meta charset="utf-8" />
+<title>{{ .Site.Params.site_name }} | {{ .Title | truncate 60 }}</title>
+<meta name="description" content="{{ .Site.Params.description | truncate 160 }}" />
+
+<!-- canonical link tag -->
+<link rel="canonical" href="{{ .Permalink | absURL }}" />
+
+<link
+  href="{{ `./fav/favicon.ico` | relURL }}"
+  rel="shortcut icon"
+  type="image/x-icon"
+/>
+<link href="{{ `./fav/favicon.ico` | relURL }}" rel="icon" type="image/x-icon" />
+
+<!--Favicon-->
+<link
+  rel="shortcut icon"
+  href="{{ `./fav/favicon.png` | relURL }}"
+  type="image/x-icon"
+/>
+<link rel="icon" href="{{ `./fav/favicon.png` | relURL }}" type="image/x-icon" />
+
+<link
+  rel="apple-touch-icon"
+  sizes="144x144"
+  href="{{ `./fav/apple-touch-icon.png` | relURL }}"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="{{ `./fav/favicon-32x32.png` | relURL }}"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="{{ `./fav/favicon-16x16.png` | relURL }}"
+/>
+<link
+  rel="mask-icon"
+  href="{{ `./fav/safari-pinned-tab.svg` | relURL }}"
+  color="#fff"
+/>
+
+<link rel="manifest" href="{{ `./fav/site.webmanifest` | relURL }}" />
+<link
+  rel="mask-icon"
+  href="{{ `./fav/safari-pinned-tab.svg` |relURL }}"
+  color="#333333"
+/>
+<meta name="msapplication-TileColor" content="#333333" />
+<meta name="theme-color" content="#f5f5f5" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">

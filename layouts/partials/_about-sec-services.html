@@ -1,0 +1,59 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ if $data.aboutpage.section_services }}
+{{ with $data.aboutpage.section_services }}
+    <section class="section section--services">
+        <div class="bg bg--1">
+            <div>
+                <img src="{{ .img | relURL }}" alt="ALT">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row row--2">
+                <div>
+                    <hgroup>
+                        <h2 class="subtitle">
+                            {{ .suptitle }}
+                        </h2>
+                        <p class="h2">{{ .title }}</p>
+                        <p class="lead">{{ .subtitle }}</p>
+                    </hgroup>
+
+                    <table class="faq">
+                        {{ range $i, $el := .faq}}
+                        <tr class="faq__row" data-aos="fade-up" data-aos-delay="{{ mul $i 150 }}">
+                          <td class="faq__term">
+                            {{ .term }}
+                          </td>
+                  
+                          <td class="faq__cta">
+                            <svg class="icon" width="24" height="24">
+                              <use xlink:href="#plus"></use>
+                            </svg>
+                            <svg class="icon" width="24" height="24">
+                              <use xlink:href="#minus"></use>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr>
+                  
+                          <td class="faq__body" colspan="2">
+                            {{ .def }}
+                          </td>
+                        </tr>
+                        {{ end }}
+                      </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        const fag_toggle = document.querySelectorAll('.faq__row');
+        fag_toggle.forEach(i => {
+          i.addEventListener("click", function () {
+            i.classList.toggle('faq__row--active');
+          });
+        });
+      </script>
+{{ end }}
+{{ end }}

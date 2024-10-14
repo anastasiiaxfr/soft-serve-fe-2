@@ -1,0 +1,141 @@
+.btn
+	+flex(inline-flex, center, center, nowrap)
+	height: 50px
+	max-width: 250px
+	padding: 8px 2em
+	border-radius: 0
+	border: 1px solid $main
+	+theme(main)
+	text-align: center
+	+ft(16, 16, 400)
+	transition: $trs
+
+	b
+		position: relative
+		overflow: hidden
+		font-weight: inherit
+	span
+		display: block
+		transition: all .25s linear
+		&:last-child
+			position: absolute
+			top: 100%
+			bottom: 0
+
+	&:hover, &:active, &:focus
+		background-color: darken($main, 10%)
+		color: $white
+		span
+			&:first-child
+				transform: translateY(-165%)
+			&:last-child
+				transform: translateY(0)
+				top: 0
+				margin: auto
+
+	&_top
+		+ps(fixed, (r, 16px), (b, 16px))
+		z-index: 1000
+		+sz(40px, 40px)
+		+theme(main)
+		border-radius: $brs
+		border: none
+
+	&-bd
+		@extend .btn
+		max-width: 100%
+		background: transparent
+		color: $main
+		border-color: $main
+	
+	&--link
+		display: inline-flex
+		align-items: center
+		gap: $gap2
+		text-transform: uppercase
+		text-decoration: underline
+		letter-spacing: 0.1em
+		+ft(16, 16, 500)
+
+		svg
+			color: lighten($main, 20%)
+
+
+.soc
+	+flex(flex, center, flex-start, nowrap)
+	gap: $gap2
+	a
+		transition: $trs
+		color: lighten($main, 30%)
+		&:hover, &:active, &:focus
+			color: $main
+
+.subscribe
+	display: grid
+	gap: $gap2
+	max-width: 500px
+	width: 100%
+	input, button
+		width: 100%
+		padding: $gap1 $gap2
+		height: 50px
+		border: 0
+		transition: $trs
+	input
+		color: $white
+		background-color: rgba($white, 0.1)
+		
+	button
+		background-color: $main
+		color: $white
+		+ft(14, 14, 600)
+		cursor: pointer
+		&:hover, &:active, &:focus
+			background-color: $white
+			color: $black
+
+.contacts
+	display: flex
+	flex-direction: column
+	justify-content: center
+	gap: $gap2
+	background-color: lighten($black, 5%)
+	border-radius: $brs 10pc $brs $brs
+	padding: $gap4
+	.contact
+		display: flex
+		gap: $gap2
+		text-align: left
+		span
+			@extend %p
+		svg
+			color: $main
+
+
+.form
+	input, textarea
+		width: 100%	
+		padding: $gap2 $gap2
+		border: 1px solid darken($dark, 3%)
+		background-color: darken($dark, 3%)
+		color: $white
+		resize: none
+		&:focus, &:active, &:focus-visible
+			border-color: $main
+			appearance: none
+			box-shadow: none
+			outline: none
+	button
+		max-width: 100%
+		width: 100%
+		margin-top: $gap4
+		cursor: pointer
+	&__row
+		margin-top: $gap2
+		margin-bottom: $gap2
+	&__wrap
+		background-color: $dark
+		padding: $gap8
+		max-width: 600px
+		margin-left: auto
+		margin-right: auto

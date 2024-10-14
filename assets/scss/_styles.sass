@@ -1,0 +1,727 @@
+%overlay
+	content: ''
+	position: absolute
+	inset: 0
+	+sz(100%, 100%)
+	background-color: rgba($black, 0.8)
+	z-index: -1
+
+body
+	+theme(dark)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: top left
+	font-family: $ffHeading, $ffBack
+
+a
+	&:hover, &:focus, &:active, &:focus-visible
+		color: inherit
+		outline: none
+		appearance: none
+		box-shadow: none
+
+.container
+	max-width: 1218px
+
+
+.page
+	&__wrapper
+		overflow: hidden
+	&__single
+		background: $black
+		padding-top: var(--gapSection)
+		padding-bottom: var(--gapSection)
+
+		h2, h3, h4, h5
+			text-transform: uppercase
+			margin-top: $gap4
+			margin-bottom: $gap2
+			+ft(24, 24, 700)
+	&__demo
+		position: relative
+		display: grid
+		grid-template-columns: 0.75fr 2fr
+		align-items: stretch
+		gap: $gap4
+		margin-bottom: $gap4
+		img
+			height: 400px
+			width: 100%
+			object-fit: cover
+			grid-row: 1
+			&:first-child
+				grid-column: 2
+				border-radius: 0 10pc 0 0
+			&:last-child
+				grid-column: 1
+	&__desc
+		display: grid
+		grid-template-columns: 0.75fr 2fr
+		gap: $gap4
+		padding-top: $gap4
+		padding-bottom: $gap4
+		border-top: 1px solid rgba($white, 0.2)
+		&:last-of-type
+			margin-bottom: $gap4
+			border-bottom: 1px solid rgba($white, 0.2)
+	+maw($md)
+		&__desc, &__demo
+			grid-template-columns: 1fr
+		&__demo
+			img:first-child
+				display: none
+		
+
+%p
+	color: rgba($white, 0.6)
+	+ft(16, 16*1.5, 400)
+
+.section
+	position: relative
+	margin-top: var(--gapSection)
+	margin-bottom: var(--gapSection)
+	z-index: 1
+	overflow: hidden
+	&--hero
+		margin: 0
+		padding-top: var(--gapSection)
+		padding-bottom: var(--gapSection)
+	&--about
+		p:not([class])
+			@extend %p
+	&--features
+		margin: 0
+		padding-top: var(--gapSection)
+		padding-bottom: var(--gapSection)
+		background-color: $black
+		overflow: hidden
+		p:not([class])
+			@extend %p
+		&-gallery
+			margin: 0
+	&--services
+		margin: 0
+		padding-top: var(--gapSection)
+		padding-bottom: var(--gapSection)
+		p:not([class])
+			@extend %p
+		&-gallery
+			margin-bottom: 0
+	&--contacts
+		margin: 0
+		padding-top: 7em
+		padding-bottom: 7em
+		background-image: url('../images/bg/cta.png')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 0 50%
+		p:not([class])
+			@extend %p
+	&--collections
+		background-color: $black
+		margin: 0
+		padding-top: var(--gapSection)
+		padding-bottom: var(--gapSection)
+		
+		p:not([class])
+			@extend %p
+	&--news
+		background: $black url('../images/bg/bg-news.svg') no-repeat right center / cover
+		margin: 0
+		padding-top: 7em
+		padding-bottom: 7em
+	&--subscribe
+		z-index: 1
+		background: $black url('../images/bg/bg-cta-subscribe.png') no-repeat 50% / cover
+		margin: 0
+		padding-top: 7em
+		padding-bottom: 7em
+		&::after
+			@extend %overlay
+	&--contatcs-cta
+		margin: 0
+		padding-top: 7em
+		padding-bottom: 7em
+		background-color: $black
+		background-image: url('../images/bg/bg-contacts-cta.svg')
+		background-repeat: no-repeat
+		background-position: right bottom
+		background-size: cover
+		background-attachment: fixed
+	&--map
+		position: relative
+		padding-top: 50%
+		& > *
+			position: absolute
+			inset: 0
+			+sz(100%, 100%)
+	&--teams
+		margin: 0
+		padding-top: var(--gapSection)
+		padding-bottom: var(--gapSection)
+		background-color: $black
+		background-image: url('../images/bg/bg-about-team.svg')
+		background-repeat: no-repeat
+		background-position: left bottom
+	&--video
+		position: relative
+		margin: 0
+		padding-top: 25%
+		padding-bottom: var(--gapSection)
+		background-color: $black
+		background-image: url('../images/bg/bg-video.png')
+		background-repeat: no-repeat
+		background-position: left bottom
+		background-attachment: fixed
+		&::after
+			@extend %overlay
+			background-color: rgba($black, 0.4)
+		hgroup
+			display: grid
+			gap: $gap3
+			.h3
+				margin: 0
+	&--stat
+		margin: 0
+		padding-top: $gap4
+		padding-bottom: $gap4
+		background-color: darken($dark, 6%)
+	&--services
+		background-color: $black
+	&--cta
+		margin: 0
+		padding-top: 10em
+		padding-bottom: 10em
+		background-color: $black
+		background-image: url('../images//bg/bg-cta.png')
+		background-repeat: no-repeat
+		background-attachment: fixed
+		&::after
+			@extend %overlay
+
+
+.row
+	display: grid
+	gap: var(--gapSection)
+	row-gap: $gap4
+	&--1
+		grid-template-columns: 1fr 1fr 
+	&--2
+		grid-template-columns: 1fr 1fr
+		div
+			grid-column: 2
+	&--3
+		grid-template-columns: 1.5fr 1fr
+		div
+			grid-column: 1
+	&--4
+		grid-template-columns: 1fr 1fr 	
+		align-items: center
+	&--5
+		grid-template-columns: 1fr 1fr 	
+		align-items: center
+	+maw($md)
+		&--1, &--2, &--4, &--5
+			grid-template-columns: 1fr
+		&--2
+			gap: 0
+			div:last-child
+				grid-column: 1
+		&--5
+			text-align: center
+			& *
+				margin-left: auto
+				margin-right: auto
+			& > div
+				width: 100%	
+	+maw($sm)
+		&--3
+			grid-template-columns: 1fr
+
+.col
+	display: grid
+	gap: $gap2
+
+.my
+	&-0
+		margin-top: 0
+		margin-bottom: 0
+	&-8
+		margin-top: $gap8
+		margin-bottom: $gap8
+	
+.bg
+	position: absolute
+	inset: 0
+	z-index: -1
+	+sz(100%, 100%)
+	display: grid
+	& *
+		height: 100%
+		width: auto
+		object-fit: cover
+	&--1
+		grid-template-columns: 1fr 1fr
+		gap: var(--gapSection)
+	&--2
+		background-color: $black
+	&--3
+		grid-template-columns: 1fr 1fr
+		column-gap: var(--gapSection)
+		div
+			grid-column: 2
+	+maw($md)
+		&--1, &--3
+			grid-template-columns: 1fr
+			gap: 0
+			&::after
+				content: ''
+				position: absolute
+				inset: 0
+				display: block
+				+sz(100%, 100%)
+				background: rgba($black, 0.75)	
+	
+.img
+	&--1
+		border-radius: 0 15pc 0 0 
+
+.stat
+	padding: $gap4
+	border: 2px solid rgba($white, 0.1)
+	&__title
+		opacity: 0.7
+		+ft(18, 18, 300)
+	&__val
+		+ft(50, 50, 700)
+		margin-bottom: $gap2
+		strong
+			color: $main
+	&:last-child
+		border-radius: 0 6pc 0 0
+
+	&s
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+		gap: $gap4
+		margin-top: $gap4
+	+maw($xs)
+		&s
+			grid-template-columns: 1fr
+
+.gallery
+	display: grid
+	gap: $gap2
+	padding: $gap2
+	&__item
+		position: relative
+		margin: 0
+		overflow: clip
+		&-overlay	
+			position: absolute
+			inset: 0
+			background: rgba($black, 0.75)
+			display: grid
+			align-items: center
+			gap: $gap2
+			padding: $gap4
+			text-align: center
+			transition: $trs
+			opacity: 0
+			visibility: hidden
+			p
+				@extend %p
+				transform: translateY(2em)
+				transition: $trs
+				transition-delay: 0.1s
+		&:hover
+			.gallery__item-overlay
+				opacity: 1
+				visibility: visible
+				p
+					transform: translateY(0)
+			.gallery__item-title
+				transform: translateY(0)
+			
+		&-img
+			position: relative
+			padding-top: 100%
+			& > *
+				position: absolute
+				inset: 0
+				+sz(100%, 100%)
+		&-title
+			@extend .h4
+			margin: 0
+			transform: translateY(2em)
+			transition: $trs
+	&--1
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+		+maw($lg)
+			p
+				display: none
+		+maw($xs)
+			p
+				display: block
+	&--2
+		grid-template-columns: repeat(3, 1fr)
+		padding: 0
+		img
+			height: 100%
+			object-fit: cover
+			&:nth-child(1)
+				grid-row-start: 1
+				grid-row-end: 2
+			&:nth-child(2)
+				grid-row-start: 3
+				grid-row-end: 4
+				border-radius: 0 0 0 10pc
+			&:nth-child(3), &:nth-child(4)
+				grid-row-start: 1 
+				grid-row-end: 4
+			&:nth-child(4)
+				border-radius: 0 10pc 0 0
+		+maw($sm)
+			grid-template-columns: 1fr
+			img
+				&:nth-child(n)
+					grid-column: 1
+				&:nth-child(1)
+					grid-row: 1
+				&:nth-child(2)
+					grid-row: 2
+				&:nth-child(3)
+					grid-row: 3
+				&:nth-child(4)
+					grid-row: 4	
+
+
+.service
+	display: grid
+	grid-template-columns: auto 1fr
+	gap: $gap2
+	&__icon
+		img
+			width: auto
+			max-width: 80px
+	&__title
+		@extend .subtitle
+		margin-bottom: $gap2
+	&__list
+		list-style-type: none
+		padding: 0
+		li
+			@extend %p
+	&s
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+		gap: $gap4
+		margin-top: var(--gapSection)
+		margin-bottom: var(--gapSection)
+	+maw($sm)
+		&s
+			grid-template-columns: 1fr 1fr
+		&__list li
+			+ft(14, 14*1.4, 300)
+	+maw($xs)
+		&s
+			grid-template-columns: 1fr
+		&__list li
+			+ft(16, 16*1.4, 300)
+
+.project
+	display: grid
+	grid-template-columns: 1fr 2fr
+	gap: $gap4
+	padding: $gap8 0
+	border: 1px solid rgba($white, 0.1)
+	border-width: 1px 0 0
+	&:last-child
+		border-bottom: 0
+	&:first-child
+		border-top: none
+	&s
+		margin-top: $gap6
+		.project
+			&:last-child
+				margin-bottom: 0
+				padding-bottom: 0
+			&:first-child
+				border-top: 1px solid rgba($white, 0.1)
+
+	&__gallery
+		display: grid
+		grid-template-columns: 2fr 1fr
+		gap: $gap2
+		align-items: stretch
+		margin-top: $gap4
+		img
+			height: 100%
+			object-fit: cover
+	&__title
+		@extend .h3
+	&__public
+		color: lighten($main, 20%)
+		+ft(12, 12, 400)
+		letter-spacing: 0.1em
+		text-transform: uppercase
+	&__desc
+		@extend %p
+		display: grid
+		grid-template-columns: 1fr auto
+		gap: var(--gapSection)
+		align-items: center
+
+		svg
+			color: $main
+			transition: $trs
+			&:hover
+				transform: translateX(5px)
+	+maw($md)
+		grid-template-columns: 1fr
+	+maw($xs)
+		&__desc
+			grid-template-columns: 1fr
+			a
+				display: none
+		&__gallery
+			grid-template-columns: 1fr
+
+
+.collection
+	display: grid
+	grid-template-columns: auto 1fr
+	gap: $gap2
+	margin: 0
+	&s
+		display: grid
+		gap: $gap2
+		margin-top: $gap4
+	&__title
+		margin-bottom: $gap2
+		@extend .h4
+	+maw($xs)
+		grid-template-columns: 1fr
+		justify-content: center
+		text-align: center	
+		img
+			margin-left: auto
+			margin-right: auto	
+
+.news
+	&__date
+		color: lighten($main, 20%)
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		+ft(14, 14, 400)
+	&__title
+		@extend .h4
+		text-decoration: underline
+		margin-bottom: $gap2
+		margin-top: $gap1
+		transition: $trs
+		&:hover
+			text-decoration: none
+	&__desc
+		@extend %p
+	&__wrapper
+		margin-top: 6em
+		display: grid
+		gap: $gap3
+
+.catalog
+	&__title
+		@extend .h4
+		margin-bottom: $gap2
+	&__desc
+		@extend %p
+		margin-bottom: $gap2
+	&s
+		display: grid
+		gap: $gap2
+		.divider:last-child
+			display: none
+
+.divider
+	+sz(100%, 1px)
+	opacity: 1
+	border: none
+	background-color: rgba($white, 0.15)
+
+
+.slide
+	&__title
+		@extend .h4
+		margin-bottom: $gap2
+	&__cat
+		color: lighten($main, 20%)
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		+ft(12, 12, 400)
+		margin-bottom: $gap2
+	&__data
+		opacity: 0.6
+	&__img
+		position: relative
+		padding-top: 100%
+		margin-bottom: $gap2
+		& > *
+			position: absolute
+			inset: 0
+			+sz(100%, 100%)
+			object-fit: cover
+
+
+.award
+	position: relative
+	&__bg
+		position: relative
+		padding-top: 75%
+		& > *
+			position: absolute
+			inset: 0
+			+sz(100%, 100%)
+			filter: grayscale(1)
+		&::after
+			content: ''
+			position: absolute
+			inset: 0
+			+sz(100%, 100%)
+			background-color: rgba($black, 0.8)
+	&__content
+		position: absolute
+		inset: 0
+		padding: $gap4
+		+flex(flex, center, center, nowrap)
+		flex-direction: column
+	&__title
+		@extend .h4
+		b
+			color: lighten($main, 20%)
+			font-weight: inherit
+	&__desc
+		@extend %p
+	&s
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+		gap: $gap4
+		margin-top: $gap4
+	+maw($sm)
+		&s
+			grid-template-columns: 1fr
+
+.team
+	display: grid
+	grid-template-columns: 1fr 1fr
+	align-items: stretch
+	background-color: $dark
+	border-radius: 0 10pc 0 0
+	overflow: hidden
+	&:nth-child(n+3), &:nth-child(n+4)
+		.team
+			&__logo
+				grid-column: 2
+				grid-row: 1
+			&__content	
+				grid-column: 1
+				grid-row: 1
+	&s
+		display: grid
+		grid-template-columns: 1fr 1fr
+		align-items: stretch
+		gap: $gap4
+		margin-top: $gap4
+	&__title
+		@extend .h4
+	&__info
+		@extend .text--note
+		+ft(16, 16, 500)
+		margin-bottom: $gap2
+	&__desc
+		@extend %p
+		margin-bottom: $gap2
+	&__logo
+		position: relative
+		padding-top: 50%
+		& > *
+			position: absolute
+			inset: 0
+			display: block
+			+sz(100%, 100%)
+			object-fit: cover
+			object-position: center top
+	&__content
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+		padding: $gap4
+		text-align: left
+	+maw($md)
+		display: flex
+		flex-direction: column
+		&__logo
+			padding-top: 100%
+	+maw($sm)
+		display: grid
+		&:nth-child(n)
+		.team
+			&__logo
+				grid-column: 2
+				grid-row: 1
+			&__content	
+				grid-column: 1
+				grid-row: 1
+		&s
+			grid-template-columns: 1fr
+	+maw($xs)
+		display: flex
+
+.workflow
+	&__title
+		@extend .h4
+		display: flex
+		justify-content: center
+		gap: $gap1
+		margin-top: $gap2
+	&__desc
+		@extend %p
+		margin-bottom: $gap4
+	&s
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+		align-items: stretch
+		gap: $gap4
+		margin-top: $gap4
+	+maw($md)
+		&s
+			grid-template-columns: 1fr 1fr
+	+maw($xs)
+		&s
+			grid-template-columns: 1fr
+
+.timeline
+	&__title
+		color: $main
+		+ft(40, 40, 500)
+	&__divider
+		opacity: 0.1
+		margin-top: $gap2
+		margin-bottom: $gap2
+	&__content
+		@extend %p
+	&s
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+		gap: $gap4
+		padding-left: $gap4
+		padding-right: $gap4
+	+maw($lg)
+		&s
+			grid-template-columns: repeat(3, 1fr)
+	+maw($sm)
+		&s
+			grid-template-columns: 1fr 1fr
+	+maw($xs)
+		&s
+			grid-template-columns: 1fr

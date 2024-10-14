@@ -1,0 +1,35 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ if $data.aboutpage.section_awards }}
+{{ with $data.aboutpage.section_awards }}
+    <section class="section section--awards">
+        <div class="container text--center">
+
+            <hgroup>
+                <h2 class="subtitle">{{ .suptitle }}</h2>
+                <p class="h2">{{ .title }}</p>
+                <p class="lead">{{ .subtitle }}</p>
+            </hgroup>
+
+            <div class="awards">
+                {{ range .items }}
+                    <article class="award">
+                        <div class="award__bg">
+                            <img src="{{ .img | relURL }}" alt="{{ .title }}">
+                        </div>
+                        <div class="award__content">
+                            <h3 class="award__title">
+                                <b>{{ .year }}</b>
+                                <span>{{ .title }}</span>
+                            </h3>
+                            <div class="award__desc">
+                                {{ .desc }}
+                            </div>
+                        </div>
+                    </article>
+                {{ end }}
+            </div>
+
+        </div>
+    </section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,132 @@
+---
+section_awards:
+  suptitle: "\\ awards \\"
+  title: We Bring Your Ideas to Light
+  subtitle: Thank you for your trust and high rating that result in multiple awards we've gained.
+  items: 
+    - year: 2017
+      title: Luminary Award
+      desc: Recognizing excellence in innovative lighting design.
+      img: './images/awards/award1.webp'
+    - year: 2018
+      title: Radiance Awards
+      desc: 1st place in the category of "Best Exterior Lighting Scheme"
+      img: './images/awards/award2.webp'
+    - year: 2020
+      title: Lumos Accolade
+      desc: Awarding brilliance in illuminating the world with light.
+      img: './images/awards/award3.webp'
+    - year: 2022
+      title: Glow Achievement
+      desc: 1st place in the category of "Transformative Lighting Design"
+      img: './images/awards/award4.webp'
+    - year: 2022
+      title: Luminosity Trophy
+      desc: Acknowledging brilliance and innovation in lighting craftsmanship.
+      img: './images/awards/award5.webp'
+    - year: 2024
+      title: Luminary Award
+      desc: Celebrating outstanding achievements in illuminating spaces.
+      img: './images/awards/award6.webp'
+
+section_teams:
+  suptitle: "/ Our Designers /"
+  title: Our Talented Designers
+  subtitle: Take a look at their background, inspiration, and most importantly their designs featured here at Prizma Studio!
+  teams:
+    - name: Josh Williams
+      exp: 10 years of experience
+      desc: Josh has the drive to create unique lightning projects that are inherently recognizable and efficient.
+      img: './images/teams/team1.webp'
+      contacts:
+        - icon: fb 
+          url: #
+        - icon: im
+          url: #
+        - icon: ytb
+          url: #
+    - name: Julia Hager
+      exp: 7 years of experience
+      desc: Julia is a highly-skilled professional designer with over 7 years of experience and eye for unique lamp designs.
+      img: './images/teams/team2.webp'
+      contacts:
+        - icon: fb 
+          url: #
+        - icon: im
+          url: #
+        - icon: ytb
+          url: #
+    - name: Jane Murphy
+      exp: 5 years of experience
+      desc: Jane is a design prodigy, who is focused utterly on contemporary lighting projects.
+      img: './images/teams/team3.webp'
+      contacts:
+        - icon: fb 
+          url: #
+        - icon: im
+          url: #
+        - icon: ytb
+          url: #      
+    - name: Gary Allen
+      exp: 5 years of experience
+      desc: Gary is passionate about creating energy-efficient lighting systems that preserve our environment.
+      img: './images/teams/team4.webp'
+      contacts:
+        - icon: fb 
+          url: #
+        - icon: im
+          url: #
+        - icon: ytb
+          url: #      
+
+section_video:
+  title: We Light up Your World 
+  subtitle: Lightning matters
+
+section_workflow:
+  suptitle: / Our Workflow /
+  title: Bespoke Lighting for Inspired Living
+  subtitle: Just four steps from the idea to its implementation.
+  items:
+    - num: "01"
+      title: Meet
+      desc: First, we meet with you and define the exact kind of lighting you need.
+      icon: './images/workflow/i1.svg'
+    - num: "02"
+      title: Design
+      desc: Once we understand your aims, we start creating designs for you.
+      icon: './images/workflow/i2.svg'
+    - num: "03"
+      title: Build
+      desc: When the design is finalized, we start creating the items.
+      icon: './images/workflow/i3.svg'     
+    - num: "04"
+      title: Install
+      desc: We mount the lightning in your space, and you may enjoy it fully!
+      icon: './images/workflow/i4.svg'     
+
+section_stat:
+  items:
+    - year: 2010
+      desc: Prizma Studio is founded with a vision to revolutionize the world of interior lighting.
+    - year: 2015
+      desc: Prizma Studio celebrates its 5th anniversary with a portfolio of successful projects.
+    - year: 2018
+      desc: We introduce our own line of light fixtures, manufactured with the highest standards.
+    - year: 2021
+      desc: We continue to excel in lighting design while reducing our environmental footprint.
+    - year: 2023
+      desc: Our services now include lighting consultations, offering clients expert guidance.
+
+section_services:
+  suptitle: / Our Services /
+  title: Shine Brighter, Shine Smarter
+  subtitle: We offer a range of lightning-related services.
+  img: './images/about-services.webp'
+  faq:
+    - term: Lighting Design
+      def: Our expert team of designers specializes in creating bespoke lighting designs that seamlessly blend functionality with aesthetics. From conceptualization to execution, we work closely with clients to craft customized lighting solutions tailored to their unique needs and preferences.
+    - term: Light Fixture Manufacturing
+      def: With a commitment to quality craftsmanship and innovation, we take pride in manufacturing our own line of light fixtures using the finest materials and techniques. From sleek and modern designs to timeless classics, our diverse range of fixtures is designed to elevate any space with elegance and sophistication. 
+    - term: Lighting Consultations
+      def: Our comprehensive lighting consultations offer clients expert guidance and insights into creating optimal lighting solutions for their spaces. Whether you're embarking on a new construction project, renovating an existing space, or simply seeking to enhance your lighting design, our experienced consultants are here to help. 

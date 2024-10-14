@@ -1,0 +1,71 @@
+	
+.faq
+	width: 100%
+	margin-top: $gap4
+	border-collapse: collapse
+	&__num
+		+ft(35, 35, 800)
+		width: 100px
+		border-right: 1px solid rgba($white, 0.2)
+		text-align: center
+
+	&__cta
+		width: 100px
+		text-align: center
+
+		svg
+			margin: auto
+			&:last-child
+				display: none
+		
+	&__term
+		+ft(24, 28, 700)
+		padding: $gap2 0
+		user-select: none
+
+	&__row
+		border-top: 1px solid rgba($white, 0.2)
+		cursor: pointer
+		&--active
+			.faq__cta
+				svg
+					&:first-child
+						display: none
+					&:last-child
+						display: block
+						
+			.faq__num
+				color: $primary
+			& + tr > .faq__body
+				display: block
+
+	tr:last-child
+			border-bottom: 1px solid rgba($white, 0.2)
+			border-bottom: 0
+	tr:first-child
+		border-top: 0
+
+	&__body
+		+ft(20, 24, 300)
+		padding: 0 0 $gap4
+		display: none
+		@extend %p
+	
+	+maw($md)
+		&__term
+			+ft(20, 20, 800)
+		&__body
+			+ft(13, 13*1.4, 300)
+	+maw($sm)
+		&__num
+			display: none
+		&__term, &__body
+			padding: 15px
+			padding-left: 0
+		&__term
+			+ft(16, 16*1.4, 700)
+	+maw($xs)
+		&__cta
+			display: none
+		&__term, &__body
+			padding-right: 0

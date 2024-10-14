@@ -1,0 +1,232 @@
+$black: #000
+$white: #fff
+$dark: #252527
+$light: #eaecf6
+
+$main: #d78c43
+$primary: #FF0000
+
+
+
+
+$grad: linear-gradient(125deg, transparent 25%, #9353FF 50%, #DDFF54)
+
+$bxsd: 0px 4px 6px -2px rgba(#111827, 0.05), 0px 12px 16px -4px rgba(#111827, 0.1)
+
+$bxsd2: 0 1px 4px rgba(0,0,0,.1)
+
+$ffHeading: 'Manrope'
+$ffText: 'Manrope'
+$ffBack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+
+$xlg: 1400
+$lg: 1200
+$md: 991
+$sm: 768
+$lsm: 640
+$xsm: 520
+$xs: 480
+$xxs: 380
+
+
+$trs: all 0.35s ease-in-out
+
+$brs: 8px
+$brs1: 16px
+$brs2: 24px
+$brs3: 32px
+$brs4: 48px
+
+
+$gap1: 8px
+$gap2: 16px
+$gap3: 24px
+$gap4: 32px
+$gap5: 40px
+$gap6: 48px
+$gap7: 56px
+$gap8: 64px
+$gap9: 72px
+$gap10: 80px
+
+
+=ft($fz, $lh: 16, $fw: 400, $ff: $ffText)
+	$lh: $lh/$fz
+	$fz: $fz/16 + rem
+	$ff: $ff, $ffBack
+	font: $fw $fz/$lh $ff 
+
+
+=theme($theme)
+	@if $theme == white
+		background-color: $white
+		color: $dark
+	@if $theme == dark
+		background-color: $dark
+		color: $white
+	@if $theme == main
+		background-color: $main
+		color: $white
+
+
+
+=sz($w, $h)
+	width: $w
+	height: $h
+
+=flex($fx, $ai, $jc, $fxw)
+	display: $fx
+	align-items: $ai
+	justify-content: $jc
+	flex-wrap: $fxw
+
+
+// input +padding((t, 30px), (b, 40px))
+// +position(absolute, (t, 0), (r, 0))
+=position($ps, $val)
+	@each $x in $ps
+		@if $x == t
+			top: $val
+
+		@if $x == b
+			bottom: $val
+
+		@if $x == l
+			left: $val
+
+		@if $x == r
+			right: $val
+
+=ps($params...)
+	position: nth($params, 1)
+	@each $par, $val in $params
+		@if $par != null and $val != null
+			+position($par, $val)
+
+// input +padding((t, 30px), (b, 40px))
+=padding($pd, $val)
+	@if $pd == t
+		padding-top: $val
+
+	@if $pd == b
+		padding-bottom: $val
+
+	@if $pd == l
+		padding-left: $val
+
+	@if $pd == r
+		padding-right: $val
+
+	@if $pd == all
+		padding: $val
+
+	
+
+=pd($params...)
+	@each $par, $val in $params
+		@if $par != null and $val != null
+			+padding($par, $val)
+
+=margin($mg, $val)
+	@if $mg == t
+		margin-top: $val
+
+	@if $mg == b
+		margin-bottom: $val
+
+	@if $mg == l
+		margin-left: $val
+
+	@if $mg == r
+		margin-right: $val
+
+	@if $mg == all
+		margin: $val
+
+=mg($params...)
+	@each $par, $val in $params
+		@if $par != null and $val != null
+			+margin($par, $val)
+
+// =sp($prop, $params...)
+// 	@if $prop == mg
+// 		+mg($params)
+// 	@if $prop == pd 
+// 		+pd($params)	
+
+$i: 0
+=spacer($arr)
+	@for $val from 1 through length($arr) 
+		$spr: nth($arr, 1)
+	@if $spr == mg
+		@for $i from 2 through length($arr)
+			$props: nth($arr, $i)
+			+margin($props...)
+	@if $spr == pd
+		@for $i from 2 through length($arr)
+			$props: nth($arr, $i)
+			+padding($props...)
+	
+=sp($x, $y)
+	+spacer($x)
+	+spacer($y)
+		
+	
+//+sp((mg, (l, 20px), (b, 15px)), (pd, (r, 10px)))
+
+	
+=maw($brkp)
+	@media only screen and (max-width: $brkp+"px")
+		@content
+
+=miw($brkp)
+	@media only screen and (min-width: $brkp+"px")
+		@content
+
+=mw($min, $max)
+	@media only screen and (min-width: $min+"px") and (max-width: $max+"px")
+		@content
+
+
+@function rem($val)
+	$res: $val/16 + rem
+	@return $res
+
+@function em($val)
+	$res: $val/16 + em
+	@return $res 
+
+
+
+//  font-size: calc([minfz] + ([maxfz] - [minfz]) * ((100vw - [miw]) / ([maw] - [miw])));
+	
+=rfz($maw, $miw, $minfz, $maxfz)
+	$maw : $maw + px
+	$miw : $miw + px
+	$minfz : $minfz + px
+	$maxfz : $maxfz + px	
+	@media only screen and (min-width: $miw) 
+		font-size: calc(#{$minfz} + (#{$maxfz} - #{$minfz}) * ((100vw - #{$miw}) / (#{$maw} - #{$miw})))
+
+	@media only screen and (min-width: $maw)
+		font-size: $maxfz
+	
+// +rfz(1120, 320, 12, 40)
+
+\:root
+	font-family: $ffText, $ffBack
+	--gapSection: 75px
+	--sectionMt: 50px
+	--mt1: 32px
+	+maw($xs)
+		--gapSection: 50px
+	+maw($xsm)
+		--sectionMt: 30px
+
+@keyframes toBtm 
+	0%
+		transform: translateY(0px)
+	50%
+		transform: translateY(10px)
+
+

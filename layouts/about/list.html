@@ -1,0 +1,51 @@
+{{ define "main" }}
+{{ $lang := .Page.Lang }}
+{{ $data := index $.Site.Data }}
+
+<main>
+  <div>
+    <!-- BEGIN section -->
+    {{- partial "header.html" . -}}
+    <!-- END section -->
+  </div>
+  <div class="page">
+    <!-- BEGIN section -->
+    <section class="hero__single" style="background-image:url('../images/bg/bg-about.png')">
+      <div class="container">
+        <h1>{{ .Title }}</h1>
+        {{- partial "_breadcrumbs.html" . -}}
+      </div>
+    </section>
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_about-sec-services.html" . -}}
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_about-sec-stat.html" . -}}
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_about-sec-workflow.html" . -}}
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_about-sec-video.html" . -}}
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_about-sec-teams.html" . -}}
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    {{- partial "_about-sec-awards.html" . -}}
+    <!-- END section -->
+  </div>
+</main>
+<style>
+  header {
+    background-color: #000;
+  }
+</style>
+{{ end }}

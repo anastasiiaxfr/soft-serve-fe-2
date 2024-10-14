@@ -1,0 +1,8 @@
+- id: login
+  translation: Log In
+
+- id: signup
+  translation: Sign Up
+
+- id: search_placeholder
+  translation: Введіть ваше питання

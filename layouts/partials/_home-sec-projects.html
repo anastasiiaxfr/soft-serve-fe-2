@@ -1,0 +1,36 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+
+<section class="section section--projects">
+    <div class="container">
+        {{ if $data.homepage.section_projects }}
+        {{ with $data.homepage.section_projects }}
+        <div class="row row--1">
+            <div>
+                <hgroup>
+                    <h2 class="subtitle">{{ .suptitle }}</h2>
+                    <p class="h2">{{ .title }}</p>
+                </hgroup>
+            </div>
+            <div>
+                <h3 class="h3 text--note">{{ .heading }}</h3>
+                <div class="lead">
+                    {{ .desc | markdownify }}
+                </div>
+                <p class="text--main">
+                    <a href="#" class="btn--link"><small>{{ .btn.label }}</small></a>
+                </p>
+            </div>
+        </div>
+        {{ end }}
+        {{ end }}
+        <div class="projects">
+            {{ $projects := .Site.Pages }}
+            {{ range first 2 (where $projects "Section" "projects") }}
+            {{ partial "_project-item.html" . }}
+            {{ end }}
+        </div>
+
+
+    </div>
+</section>

@@ -1,0 +1,26 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.section_subscribe }}
+{{ with $data.homepage.section_subscribe }}
+<section class="section section--subscribe">
+    <div class="container">
+
+        <div class="row row--5">
+            <div>
+                <hgroup>
+                    <h2 class="text--main">{{ .title }}</h2>
+                    <p class="lead">{{ .subtitle }}</p>
+                </hgroup>
+            </div>
+            <div>
+                <form action="/" method="POST" class="subscribe">
+                    <input type="email" placeholder="E-mail">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+{{ end }}
+{{ end }}

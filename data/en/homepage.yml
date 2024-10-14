@@ -1,0 +1,241 @@
+---
+hero:
+  enable: true
+  title: "Prizma Lighting Studio in NY"
+  suptitle: "\\ Welcome to \\"
+  btn:
+    label:  Collections
+    url: "#form-main"
+  text_1: $399
+  text_2: "\"The Morning Glory\"<br>Ceiling Lamp"
+  text_3: "Enhance your home or office with effective and stylish <b>lightning</b> by Prizma Studio."
+  text_4:  Send a request now!
+  text_5: "We have more than **10 years** of experience of improving our clients’ projects with lighting solutions."
+  btn_link: Read more
+
+
+section_about:
+  suptitle: "\\ about us \\"
+  title: Illuminate Your Space, Illuminate Your Life With Us
+  subtitle: Get a lightning solution that suits your needs.
+  heading: Place the Right Accents with Modern Lights by Prizma Studio
+  desc: | 
+    We closely cooperate with our clients to fully understand their needs and goals during the early stages of the project. We provide accurate lighting analysis, detailed specifications, schedules for A/V integration, detailed fixture design, and more.
+
+    Our true passion is the art of integrating light within architecture. We have completed over 2000 residential projects and built complex lighting system designs nearly in every interior and exterior imaginable.
+  stat:
+    - val: "15K **+**"
+      title: "Lamps installed in 2023"
+    - val: "298"
+      title: "Custom solutions"
+    - val: "2K **+**"
+      title: "Clients in the USA"
+    - val: "599"
+      title: "Large-scale projects"
+
+section_features:
+  img: './images/img2.webp'
+  suptitle: "\\ features \\"
+  title: What Makes Our Offering Seamless
+  subtitle: Looking for a lightning solution for your home or office?
+  desc: At Prizma Studio, we're dedicated to illuminating your spaces with creativity and precision. With our expertise in lightning design for residential and office environments, we're your top choice for bringing your vision to life with innovative and tailored solutions.
+  list:
+    - item: We listen to our clients;
+    - item: We factor in the architect's intent;
+    - item: We take your budget into account;
+    - item: We are attentive to details;
+    - item: We design lighting to be seen by everyone.
+  note: Trust us to light up your world with brilliance.
+  btn:
+    label: More About Us
+
+section_features_gallery:
+  gallery:
+    - title: Commercial Projects
+      desc: We excel in creating captivating lighting designs that enhance the ambiance and elevate the customer experience.
+      img: './images/features/img3.webp'
+    - title: Healthcare Projects
+      desc: We focus on providing soothing and functional lighting solutions to promote healing and well-being in hospitals.
+      img: './images/features/img4.webp'
+    - title: Corporate Offices
+      desc: Our designs strike the perfect balance between functionality and aesthetics to create inspiring workspaces.
+      img: './images/features/img5.webp'
+    - title: Residential Spaces
+      desc: We specialize in crafting personalized lighting schemes that reflect the lifestyle and preferences of homeowners.
+      img: './images/features/img6.webp'
+
+
+section_services:
+  suptitle: "\\ services \\"
+  title: Discover Power of Perfect Lighting
+  subtitle: Welcome to our diverse world of lighting solutions.
+  desc: From ambient to task lighting, our expertise spans a wide range of styles and functionalities to suit every space and requirement.
+  note: Explore our curated selection of lighting options.
+  items:
+    - item: Ceiling Fixtures
+      features: 
+       - feature: Chandeliers
+       - feature: Flush Mount
+       - feature: Pendant Lights
+       - feature: Track Lighting
+      icon: './images/pic1.svg'
+    - item: Floor Lamps
+      features: 
+       - feature: Arc Lamps
+       - feature: Tripod Lamps
+       - feature: Task Lamps
+       - feature: Torchiere Lamps
+      icon: './images/pic2.svg'
+    - item: Wall Sconces
+      features: 
+       - feature: Swing Arm Sconces
+       - feature: Candle Sconces
+       - feature: Picture Lights
+       - feature: Uplight Sconces
+      icon: './images/pic3.svg'
+    - item: Wall Mounted Lights
+      features: 
+       - feature: Wall Washers
+       - feature: Vanity Lights
+       - feature: Reading Lights
+       - feature: Outdoor Wall Lights
+      icon: './images/pic4.svg'
+    - item: Kitchen Island Lights
+      features: 
+       - feature: Linear Pendant Lights
+       - feature: Globe Pendant Lights
+       - feature: Mini Pendant Lights
+       - feature: Recessed Lighting
+      icon: './images/pic5.svg'
+    - item: Modular Lighting
+      features: 
+       - feature: Modular Track Systems
+       - feature: Magnetic LED Panels
+       - feature: Modular Wall Lights
+       - feature: Adjustable Clusters
+      icon: './images/pic6.svg'
+    - item: LED Lighting
+      features: 
+       - feature: Recessed Downlights
+       - feature: Strip Lights
+       - feature: Pendant Fixtures
+       - feature: Wall Washers
+      icon: './images/pic7.svg'
+    - item: Smart Lighting
+      features: 
+       - feature: Smart Bulbs
+       - feature: Smart Light Strips
+       - feature: Smart Dimmer Switches
+       - feature: Smart Lighting Kits
+      icon: './images/pic8.svg'
+
+section_services_gallery:
+  gallery:
+    - img: './images/services/img7.webp'
+    - img: './images/services/img8.webp'
+    - img: './images/services/img9.webp'
+    - img: './images/services/img10.webp'
+
+section_contacts:
+  suptitle: "\\ Contact us \\"
+  title: Ready to Transform Your Space With Us?
+  subtitle: Get a full-scale analysis of your project and recommended solutions.
+  contact: "Call us <a href='tel:+12345678900' class='text--note'>+1 (234) 567 89 00</a> or write us <a href='mailto:prizma-studio@email.com' class='text--note'>prizma-studio@email.com</a>"
+  btn:
+    label: Get a Quote
+
+section_projects:
+  suptitle: "\\ projects \\"
+  title: "Where Brilliance Meets Design"
+  heading: Shaping Light, Shaping Spaces
+  desc: We offer lighting solutions for residential, commercial, and other spaces. Explore some of our projects below.
+  btn:
+    label: More projects
+  projects:
+    - title: 432 Broadway
+      date: 12 September, 2023
+      desc: In this completed lighting design project, we've orchestrated a harmonious interplay of ceiling and floor lamps to illuminate and elevate the ambiance of a living room space. Through thoughtful consideration of both form and function, Prizma Studio has crafted a lighting design that not only meets the practical needs of the space but also enhances its aesthetic appeal.
+      imgs:
+        - img: './images/img11.webp'
+        - img: './images/img12.webp'
+
+    - title: Luminous Harmony
+      date: 24 april, 2024
+      desc: Luminous Harmony is a showcase of innovative lighting design implemented at the prestigious Riverfront Hotel in Chicago. This project was designed to create an ambiance that complements the luxurious interior while enhancing the architectural features of the hotel.
+      imgs:
+        - img: './images/img13.webp'
+        - img: './images/img14.webp'
+
+section_collections:
+  img: './images/img15.webp'
+  suptitle: "\\ Collections \\"
+  title: Lighting Solutions
+  subtitle: Materials & processes we use to make our lighting collections.
+  desc: "At Prizma Studio, we take pride in crafting our own lightning items using only the finest materials, ensuring both quality and aesthetics are never compromised. Our dedication to excellence is evident in the meticulous selection of materials, including:"
+  items:
+    - title: Silk Printing
+      img: './images/p1.webp'
+      desc: Harnessing the elegance and versatility of silk printing, we adorn our lighting fixtures with intricate patterns and designs that elevate their visual appeal.
+    - title: Polymeric Material
+      img: './images/p2.webp'
+      desc: With an eye for innovation, our designers utilize versatile polymeric materials to bring our lighting designs to life with modern flair and durability.
+    - title: Forged Metal
+      img: './images/p3.webp'
+      desc: For timeless elegance and enduring strength, we turn to forged metal in crafting our lighting masterpieces. Each piece is meticulously handcrafted by skilled artisans.
+
+section_news:
+  suptitle: "\\ News & Articles \\"
+  title: News & Articles
+  subtitle: Read more about design and lightning techniques.
+  img: './images/img16.webp'
+  news:
+    - date: 12 April, 2024
+      cat: Technology
+      title: Cutting-Edge LED Technology
+      desc: Innovative advancements in LED technology are revolutionizing the lighting industry, offering unparalleled energy savings and longevity.
+    - date: 12 may 2024
+      cat: Tips
+      title: Benefits of Natural Lighting in Workspaces
+      desc: In this article, we delve into how harnessing the power of sunlight can enhance productivity, well-being, and overall satisfaction in the workplace.
+
+
+section_subscribe:
+  title: Subscribe Now
+  subtitle: Get our latest news, special offers, and design ideas.
+
+section_catalog:
+  suptitle: "\\ catalogs \\"
+  title: Shaping Light, Shaping Spaces
+  subtitle: Take a look at our selection of top picks you've been searching for. We've got everything for your lighting needs.
+  btn:
+    label: Our Store
+  catalog:
+    - title: '"Wooden Life" Catalog'
+      desc: Explore our comprehensive catalog of lighting fixtures, featuring a wide range of styles and designs to illuminate every space beautifully.
+      btn:
+        label: download pdf
+    - title: 'Outdoor Lighting Catalog'
+      desc: Explore our outdoor lighting catalog, showcasing durable and stylish fixtures designed to enhance your outdoor living areas with elegance.
+      btn:
+        label: download pdf
+  slides:
+    - title: Aurora Lamp
+      cat: Classic Collection
+      year: 2023
+      img: './images/sld1.webp'
+    - title: Luminous Haven
+      cat: Wooden Life Collection
+      year: 2024
+      img: './images/sld2.webp'
+    - title: Wooden Blocks
+      cat: Wooden Life Collection
+      year: 2024
+      img: './images/sld3.webp'
+    - title: Cake in the Ocean
+      cat: Ceiling fixtures
+      year: 2022
+      img: './images/sld4.webp'
+    - title: Arretia Lamp
+      cat: Bedside lamps
+      year: 2022
+      img: './images/sld5.webp'

@@ -1,0 +1,51 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+
+<section class="section section--services">
+    {{ if $data.homepage.section_services }}
+    {{ with $data.homepage.section_services }}
+    <div class="container">
+        <div class="row row--1">
+            <div>
+                <hgroup>
+                    <h2 class="subtitle">{{ .suptitle }}</h2>
+                    <p class="h2">{{ .title }}</p>
+                </hgroup>
+            </div>
+            <div>
+                <p class="lead">{{ .subtitle }}</p>
+                <p>{{ .desc }}</p>
+                <p class="text--note">
+                    <svg class="icon" width="24" height="24">
+                        <use xlink:href="#lamp"></use>
+                    </svg>
+                    <b>{{ .note }}</b>
+                </p>
+            </div>
+        </div>
+
+        <div class="services">
+            {{ range .items }}
+            <article class="service">
+                <div class="service__icon">
+                    <img src="{{ .icon }}" alt="{{ .title }}" width="150">
+                </div>
+                <div class="service__content">
+                    <h3 class="service__title">{{ .item }}</h3>
+                    <ul class="service__list">
+                        {{ range .features }}
+                        <li>{{ .feature }}</li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+    <!-- BEGIN section -->
+    {{- partial "_home-sec-services-gallery.html" . -}}
+    <!-- END section -->
+
+</section>

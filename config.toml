@@ -1,0 +1,203 @@
+baseURL = "/"
+# canonifyURLs = true
+defaultContentLanguage = "en"
+disableLanguages = ["ru"]
+paginate = "6"
+relativeURLs = true
+summaryLength = "50"
+title = "Home"
+
+# [Languages.en]
+# contentDir = "content/en"
+# home = "Home"
+# languageCode = "en-us"
+# languageName = "En"
+# weight = 3
+[Languages.ru]
+contentDir = "content/ru"
+home = "Главная"
+languageCode = "ru"
+languageName = "Ру"
+weight = 2
+
+[Languages.en]
+contentDir = "content/en"
+home = "Home"
+languageCode = "en"
+languageName = "ENG"
+weight = 1
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[sitemap]
+ChangeFreq = "daily"
+Priority = 0.6
+Weight = [["main", "1"], ["sub2", "0.8"], ["sub3", "0.6"]]
+enableRobotsTXT = true
+
+[params]
+CIO_site_id = "XXX"
+GTM = "GTM-WHBQ3BV"
+author = "Prizma"
+develop = "Anastasiia_Berest"
+logo = "./images/logo.svg"
+logo_dark = "./images/logo.svg"
+logo_description = "Prizma"
+site_name = "Prizma"
+site_url = "#"
+description = "Is a simple ecnosystem of interconnected crypto products designed for the mass adoption of cryptocurrencies."
+# search
+search = true
+
+# soc
+[[params.plugins.js]]
+link = "plugins/js/jquery.min.js"
+
+[params.preloader]
+enable = true
+preloader = ""
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+############################# socials #################################
+[[params.soc]]
+icon = "fb"
+link = "#"
+
+[[params.soc]]
+icon = "im"
+link = "#"
+
+[[params.soc]]
+icon = "tm"
+link = "#"
+
+[[params.soc]]
+icon = "ytb"
+link = "#"
+
+[[params.soc]]
+icon = "email"
+link = "#"
+
+############################# contacts #################################
+[[params.contacts]]
+icon = "map"
+link = "#"
+title = "2 Broklyn St, NY <br>711-2880 Nulla St, NY935-9940 Tortor. Street, NY<br>666-4366 Lacinia Avenue, NY"
+
+[[params.contacts]]
+icon = "msg"
+link = "mailto:prizma-studio@email.com"
+title = "prizma-studio@email.com"
+
+[[params.contacts]]
+icon = "tel"
+link = "tel:+12345678900"
+title = "+1 (234) 567 89 00"
+
+
+
+############################# footer #################################
+[params.footer]
+copyright = "Created by Anastasiia Berest"
+note = "We provide lightning solutions for homes and businesses. Prizma Studio develops lightning projects and creates unique light fixtures."
+
+[[menu.footer]]
+hasChildren = true
+name = "Navigation"
+weight = 1
+
+[[menu.footer]]
+URL = "/about"
+name = "About Us"
+parent = "Navigation"
+weight = 1
+
+[[menu.footer]]
+URL = "/"
+name = "Services"
+parent = "Navigation"
+weight = 2
+
+[[menu.footer]]
+URL = "/projects"
+name = "Projects"
+parent = "Navigation"
+weight = 3
+
+[[menu.footer]]
+URL = "/"
+name = "Collections"
+parent = "Navigation"
+weight = 4
+
+[[menu.footer]]
+URL = "/contacts"
+name = "Contacts"
+parent = "Navigation"
+weight = 4
+
+[[menu.footer]]
+hasChildren = true
+identifier = "collections"
+name = "Collections"
+weight = 2
+
+[[menu.footer]]
+URL = "/"
+name = "Wooden Life"
+parent = "collections"
+weight = 1
+
+[[menu.footer]]
+URL = "/"
+name = "Outdoor Lightning"
+parent = "collections"
+weight = 2
+
+[[menu.footer]]
+URL = "/"
+name = "Ceiling Fixtures"
+parent = "collections"
+weight = 3
+
+[[menu.footer]]
+URL = "/"
+name = "Bedside Lamps"
+parent = "collections"
+weight = 4
+
+[[menu.footer]]
+URL = "/"
+name = "LED Lightning"
+parent = "collections"
+weight = 5
+
+[[menu.header]]
+URL = "/about"
+name = "About us"
+weight = 1
+
+[[menu.header]]
+URL = "/"
+name = "Design"
+weight = 2
+
+[[menu.header]]
+URL = "/projects"
+name = "Projects"
+weight = 3
+
+[[menu.header]]
+URL = "/"
+name = "Collections"
+weight = 4
+
+[[menu.header]]
+URL = "/contacts"
+name = "Contacts"
+weight = 5

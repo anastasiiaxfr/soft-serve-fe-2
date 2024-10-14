@@ -1,0 +1,287 @@
+.header
+	position: relative
+	z-index: 100
+	padding-top: $gap2
+	padding-bottom: $gap2
+
+.drawer
+	+ps(fixed, (t, 0), (l, 0))
+	z-index: 1000
+	+sz(100%, 100%)
+	padding: $gap3
+	background: $black
+	color: $white
+	transition: transform 0.3s linear
+	overflow: hidden
+	overflow-y: scroll
+	height: 0
+	visibility: hidden
+	transform: translateX(-100%)
+	&__container
+		display: flex
+		flex-direction: column
+		width: 100%
+	&__header
+		width: 100%
+		+flex(flex, center, space-between, nowrap)
+		padding-bottom: $gap3
+	&__content
+		+sz(100%, 100%)
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__nav
+		display: flex
+		flex-direction: column
+		margin-bottom: $gap3
+		a
+			padding: $gap3 0
+			+flex(flex, center, space-between, nowrap)
+			+ft(22, 22, 400)
+			text-transform: uppercase
+			border: 1px solid $white
+			border-width: 1px 0 0
+			&:first-child
+				border-top: 0
+			svg
+				color: $main
+	&.show
+		display: flex
+		visibility: visible
+		height: 100%
+		transform: translateX(0)
+
+	+maw($xs)
+		.contacts
+			text-align: center
+		.logo img
+			width: 80%
+		&__nav a
+			+ft(16, 16, 500)
+
+
+.navbar
+	+flex(flex, center, space-between, nowrap)
+	gap: $gap2
+	&__btns
+		+flex(inline-flex, center, center, nowrap)
+		gap: $gap2
+		margin-left: auto
+	&__toggler
+		border: none
+		padding: 0
+		color: inherit
+		background: transparent
+		&:hover, &:active, &:focus
+			box-shadow: none
+	&__nav
+		+flex(inline-flex, center, center, nowrap)
+		gap: 1.5em
+		a
+			position: relative
+			transition: $trs
+			text-transform: capitalize
+			+ft(14, 14, 400, $ffHeading)
+			margin-top: 4px
+			.header &
+				opacity: 0.6
+			&::after 
+				content: ''
+				display: block
+				margin-top: 1px
+				+sz(100%, 1px)
+				background: $white
+				transition: width .3s
+			&:hover
+				color: $main
+				opacity: 1
+				text-decoration: none
+				&::after
+					width: 0
+			
+	+miw($sm)
+		&__btns
+			display: none
+		&__toggler
+			display: none
+	+maw($sm)
+		&__btns
+			display: flex
+		&__nav
+			display: none
+
+	
+
+.hero
+	position: relative
+	z-index: 1
+	&__single
+		position: relative
+		z-index: 1
+		margin: 0
+		padding-top: var(--gapSection)
+		padding-bottom: var(--gapSection)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		background-color: $black
+		//background-attachment: fixed
+		text-align: center
+		&::after
+			content: ''
+			position: absolute
+			inset: 0
+			z-index: -1
+			+sz(100%, 100%)
+			background-color: rgba($black, 0.8)
+		h1
+			+ft(62, 62, 600)
+			color: $main
+			margin-bottom: $gap2
+			margin-top: 0
+
+
+	&__wrap
+		background-image: url('../images/bg/hero.png')
+		position: relative
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 50%
+		color: $white
+		z-index: 100
+	&__container
+		display: grid
+		gap: var(--gapSection)
+	&__row
+		display: grid
+		grid-template-columns: 2.5fr 1fr 1fr
+		gap: $gap4
+		&:last-child
+			align-items: flex-end
+			grid-template-columns: 1fr 1fr 1fr
+	&__col
+		&:last-child
+			grid-column: 3
+			text-align: right
+		strong
+			color: lighten($main, 30%)
+			font-weight: inherit
+		p:not([class])
+			@extend %p
+	&__soc
+		margin-top: $gap4
+		
+	+maw($sm)
+		&__wrap
+			background-position: 45% 100%
+		&__container
+			row-gap: 5em
+		&__row
+			&:nth-child(n)
+				grid-template-columns: 1fr
+		&__col
+			grid-column: 1
+			&:last-child
+				grid-column: 1
+				grid-row: 2
+				text-align: left
+
+
+.footer
+	background: $black
+	color: $white
+	&__top
+		padding: $gap8 0
+		+ft(14, 14*1.4, 300)
+		.container
+			display: grid
+			grid-template-columns: 1fr auto 1fr
+			gap: 5em
+			row-gap: $gap2
+	&__col
+		display: grid
+		gap: $gap2
+			
+	&__btm
+		padding: 0 0 
+		.container
+			+flex(flex, center, space-between, wrap)
+			padding-top: $gap2
+			padding-bottom: $gap2
+			gap: $gap2
+			opacity: 0.6
+			border-top: 1px solid rgba($white, 0.25)
+	&__note
+		@extend %p
+	&__divider
+		opacity: 1
+		+sz(35px, 4px)
+		background-color: lighten($main, 20%)
+		border: 0
+		margin: $gap3 0
+	&__soc
+		a
+			+flex(flex, center, center, wrap)
+			+sz(40px, 40px)
+			background-color: $main
+			transition: $trs
+			svg
+				color: $black
+			&:hover, &:focus, &:active
+				background-color: lighten($main, 20%)
+	&__nav
+		display: grid
+		grid-template-columns: 1fr 1fr
+		gap: $gap4
+		row-gap: $gap2
+		margin-left: auto
+		margin-right: 0
+		margin-top: 4px
+		&-title
+			text-align: left
+			text-transform: uppercase
+			letter-spacing: 0.15em
+			+ft(12, 12, 500)
+		&-sub
+			padding: 0
+			list-style-type: none
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			gap: $gap2
+		a
+			position: relative
+			transition: $trs
+			+ft(16, 16, 400, $ffHeading)
+			opacity: 0.6
+
+			&:hover, &:active, &:focus
+				color: $main
+				opacity: 1
+				&::after
+					width: 100%
+			&::after 
+				content: ''
+				display: block
+				margin-top: 2px
+				+sz(0, 2px)
+				background: $main
+				transition: width .3s
+	+maw(1040)
+		&__top .container
+			display: flex
+			flex-wrap: wrap
+
+
+.logo
+	+flex(inline-flex, center, flex-start, nowrap)
+	margin: 0
+	&::after
+		display: none
+
+
+.soc
+	a
+		transition: $trs
+		&:hover, &:active, &:focus
+			color: $main

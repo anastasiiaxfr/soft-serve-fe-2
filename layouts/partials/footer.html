@@ -1,0 +1,65 @@
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+
+            <div class="footer__col">
+                {{ .Scratch.Set "logo_h" "32" }}
+                {{ .Scratch.Set "logo_w" "auto" }}
+                {{- partial "_logo.html" . -}}
+                <div class="footer__note">
+                    {{ .Site.Params.footer.note }}
+                </div>
+                <div class="footer__soc">
+                    {{- partial "_soc.html" . -}}
+                </div>
+            </div>
+            <div class="footer__col">
+                <nav class="footer__nav">
+                    {{ range .Site.Menus.footer }}
+                    <div>
+                        <span class="footer__nav-title">
+                            {{ .Name }}
+                        </span>
+                        <hr class="footer__divider">
+
+                        {{ if .Children }}
+                        <ul class="footer__nav-sub">
+                            {{ range .Children }}
+                            <li>
+                                <a href="{{ .URL }}" target="_self">
+
+                                    {{ .Name }}
+                                </a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </nav>
+            </div>
+            <div class="footer__col">
+                <div class="contacts">
+                    {{ range .Site.Params.contacts }}
+                    <a href="{{ .link }}" class="contact">
+                        <svg class="icon" width="24" height="24">
+                            <use xlink:href="#{{ .icon }}"></use>
+                        </svg>
+                        <span>
+                            {{ .title | safeHTML }}
+                        </span>
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__btm">
+        <div class="container">
+            <p>{{ .Site.Params.footer.copyright | markdownify }}</p>
+            <p>All rights Reserved</p>
+        </div>
+    </div>
+</footer>
+<!--Main Footer-->

@@ -1,0 +1,44 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.section_news }}
+{{ with $data.homepage.section_news }}
+<section class="section section--news">
+    <div class="container">
+
+        <div class="row row--4">
+            <div>
+                <hgroup>
+                    <h2 class="subtitle">{{ .suptitle }}</h2>
+                    <p class="h2">{{ .title }}</p>
+                    <p class="lead">{{ .subtitle }}</p>
+                </hgroup>
+
+                <div class="news__wrapper">
+                    {{ range .news }}
+                    <article class="news">
+                        <div class="news__date">
+                            {{ .date }} | {{ .cat }}
+                        </div>
+                        <a href="#">
+                            <h3 class="news__title">
+                                {{ .title }}
+                            </h3>
+                        </a>
+                        <div class="news__desc">
+                            <p>
+                                {{ .desc }}
+                            </p>
+                        </div>
+                    </article>
+                    {{ end }}
+                </div>
+            </div>
+            <div>
+                <img src="{{ .img | relURL }}" alt="{{ .title }}" class="img--1">
+            </div>
+        </div>
+
+    </div>
+</section>
+{{ end }}
+{{ end }}

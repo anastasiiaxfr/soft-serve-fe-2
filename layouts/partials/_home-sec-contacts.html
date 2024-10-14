@@ -1,0 +1,25 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.section_contacts }}
+{{ with $data.homepage.section_contacts }}
+<section class="section section--contacts">
+    <div class="container">
+        
+       <div class="row row--3">
+        <div class="col">
+            <hgroup>
+                <h2 class="subtitle">{{ .suptitle }}</h2>
+                <p class="h2">{{ .title }}</p>
+                <p class="lead">{{ .subtitle }}</p>
+            </hgroup>
+            <p>{{ .contact | safeHTML }}</p>
+            <a href="#" class="btn">
+                <b><span>{{ .btn.label }}</span><span>{{ .btn.label }}</span></b>
+            </a>
+        </div>
+       </div>
+      
+    </div>
+</section>
+{{ end }}
+{{ end }}

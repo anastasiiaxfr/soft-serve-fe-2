@@ -1,0 +1,44 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.section_features }}
+{{ with $data.homepage.section_features }}
+<section class="section section--features">
+    <div class="bg bg--1">
+        <div>
+            <img src="{{ .img | relURL }}" alt="ALT">
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row row--2">
+            <div>
+                <hgroup>
+                    <h2 class="subtitle">
+                        {{ .suptitle }}
+                    </h2>
+                    <p class="h2">{{ .title }}</p>
+                    <p class="lead">{{ .subtitle }}</p>
+                </hgroup>
+                <div>
+                    <p>{{ .desc }}</p>
+                </div>
+                <ul class="check">
+                    {{ range .list }}
+                    <li><span>{{ .item }}</span></li>
+                    {{ end }}
+                </ul>
+               <div>
+                <p class="text--note">{{ .note }}</p>
+               </div>
+
+                <a href="#" class="btn">
+                    <b><span>{{ .btn.label }}</span><span>{{ .btn.label }}</span></b>
+                </a>
+            </div>
+        </div>
+      
+    </div>
+</section>
+{{ end }}
+{{ end }}

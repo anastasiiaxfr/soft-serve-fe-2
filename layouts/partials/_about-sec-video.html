@@ -1,0 +1,22 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ if $data.aboutpage.section_video }}
+{{ with $data.aboutpage.section_video }}
+    <section class="section section--video">
+        
+        <div class="container">
+
+            <hgroup>
+                <div class="text--note">
+                    <svg class="icon" width="64" height="64">
+                        <use xlink:href="#play"></use>
+                    </svg>
+                </div>
+                <p class="h3">{{ .title }}</p>
+                <h2 class="subtitle">{{ .subtitle }}</h2>
+            </hgroup>
+
+            
+        </div>
+    </section>
+{{ end }}
+{{ end }}

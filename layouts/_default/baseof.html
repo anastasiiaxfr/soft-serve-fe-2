@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+{{- partial "head.html" . -}}
+
+<body lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}" class="page__body">
+
+
+  <div class="page__wrapper">
+
+    {{- partial "preloader.html" . -}}
+    {{- block "main" . }}{{- end }}
+
+  </div>
+
+
+  {{- partial "_btn-top.html" . -}}
+  {{- partial "footer.html" . -}}
+
+  <!-- <script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Organization",
+      "name": "ITG",
+      "brand": "ITG",
+      "alternateName": "ITG",
+      "url": "https://itg-main.netlify.app/",
+      "logo": "https://itg-main.netlify.app/logo.svg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Василя Тютюнника 28А",
+        "addressLocality": "Київ",
+        "addressCountry": "Україна"
+      },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "380505635807",
+        "email": "office@itg-investments.com",
+        "contactType": "customer support",
+        "areaServed": "UA",
+        "availableLanguage": ["Ukrain"]
+      }],
+      "sameAs": [
+        "https://www.facebook.com/InternationalTradeGroup2018",
+        "https://www.instagram.com/itg_official__/",
+        "https://www.tiktok.com/@itg_general__",
+        "https://twitter.com/ITG_General_",
+        "https://www.youtube.com/channel/UC4Blz7CAtrKwTL8mYt6LpfA",
+        "https://t.me/ITG_club",
+        "https://ru.tradingview.com/u/ITG_company/"
+      ]
+    }
+</script> -->
+
+  {{ range .Site.Params.plugins.js }}
+  <script src="{{ .link | relURL }}"></script>
+  {{ end }}
+
+
+ <!-- <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.css"
+/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.js"></script>
+ -->
+
+ <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+
+ <script type="text/javascript">
+  const emblaNode = document.querySelector('.embla');
+  const options = { loop: true,  slidesToScroll: 'auto' }; // Set loop to true
+  const emblaApi = EmblaCarousel(emblaNode, options);
+
+  const prevButton = document.querySelector('.embla__button--prev');
+  const nextButton = document.querySelector('.embla__button--next');
+
+  prevButton.addEventListener('click', () => {
+    emblaApi.scrollPrev(); // Scroll to the previous slide
+  });
+
+  nextButton.addEventListener('click', () => {
+    emblaApi.scrollNext(); // Scroll to the next slide
+  });
+
+  console.log(emblaApi.slideNodes()); // Access API
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  {{ $script := resources.Get "js/script.js" | minify }}
+  <script src="{{ $script.Permalink | relURL }}?v={{ now.Format "01-02-2006-14-52-26"}}"></script>
+
+  {{- partial "_svg.html" . -}}
+
+
+</body>
+</html>

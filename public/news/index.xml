@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terms of Service on Home</title>
+    <link>//localhost:53647/news/</link>
+    <description>Recent content in Terms of Service on Home</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 23 Feb 2023 13:51:52 +0200</lastBuildDate>
+    <atom:link href="//localhost:53647/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Банк Израиля представил руководство для эмитентов стейблкоинов</title>
+      <link>//localhost:53647/news/articles-2023-02-23-12-03/</link>
+      <pubDate>Thu, 23 Feb 2023 13:51:52 +0200</pubDate>
+      <guid>//localhost:53647/news/articles-2023-02-23-12-03/</guid>
+      <description>Банк Израиля опубликовал набор требований к эмитентам «стабильных монет». Рекомендации предполагают запрет алгостейблкоинов в случае их широкого применения в платежах.&#xA;Инициатива направлена на легализацию «стабильных монет» с учетом управления присущих им рисков, защиты потребителей и пруденциальных требований. Она уточняет представленные Минфином страны в ноябре 2022 года руководящие принципы регулирования цифровых активов.</description>
+    </item>
+    <item>
+      <title>Coinbase Global, оператор крупнейшей в США криптовалютной биржи, завершил четвертый квартал с чистым убытком, в том числе из-за значительного снижения объема торгов.</title>
+      <link>//localhost:53647/news/articles-2023-02-22-12-54/</link>
+      <pubDate>Wed, 22 Feb 2023 14:29:08 +0200</pubDate>
+      <guid>//localhost:53647/news/articles-2023-02-22-12-54/</guid>
+      <description>Как сообщается в пресс-релизе компании, чистый убыток в октябре-декабре составил $557 млн, или $2,46 в расчете на акцию, по сравнению с чистой прибылью в размере $840 млн, или $3,32 на акцию, за аналогичный период предыдущего года.&#xA;Выручка обвалилась до $629 млн против $2,49 млрд годом ранее. Объем торгов упал до $145 млрд с $547 млрд.</description>
+    </item>
+    <item>
+      <title>КНР вводит санкции против Lockheed Martin и Raytheon Technologies Corp из-за их участия в продаже оружия Тайваню</title>
+      <link>//localhost:53647/news/articles-2023-02-16-14-01/</link>
+      <pubDate>Thu, 16 Feb 2023 15:59:02 +0200</pubDate>
+      <guid>//localhost:53647/news/articles-2023-02-16-14-01/</guid>
+      <description>Министерство торговли КНР сообщило 16 февраля, что в контеексте усиления напряженности между странами, оно внесло Lockheed Martin Corp (LMT.N) и Raytheon Technologies Corp (RTX.N) в «список ненадежных организаций» в связи с продажей оружия Тайваню, его последними санкциями против двух мощных военных подрядчика США,&#xA;В рамках усиления напряженности между США и КНР, китайское правительство не просто запретит торговлю с Lockheed и Raytheon Missiles &amp;amp; Defense, но также запретит новые инвестиции военных фирм в КНР.</description>
+    </item>
+    <item>
+      <title>Цена Shiba Inu отскочила на 100% после рекордных минимумов по отношению к Dogecoin</title>
+      <link>//localhost:53647/news/articles-2023-02-06-09-00/</link>
+      <pubDate>Mon, 06 Feb 2023 10:59:18 +0200</pubDate>
+      <guid>//localhost:53647/news/articles-2023-02-06-09-00/</guid>
+      <description>Технические характеристики цены SHIB намекают на еще одно возможное 40% ралли для Shiba Inu против Dogecoin, так как Shibarium (https://cointelegraph.com/news/shiba-inu-price-rebounds-100-after-record-lows-against-dogecoin-more-upside-ahead)(блокчейн второго уровня, созданный на базе Ethereum mainnet, о котором было объявлено 16 января) выходит на первый план&#xA;Как сообщает Cointelegraph, восстановление цены SHIB набрало обороты на фоне сообщений о том, что Shibarium будет запущен 14 февраля.</description>
+    </item>
+  </channel>
+</rss>

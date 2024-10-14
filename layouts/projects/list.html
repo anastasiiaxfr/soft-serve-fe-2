@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{ $lang := .Page.Lang }}
+{{ $data := index $.Site.Data }}
+
+<main>
+  <div>
+    <!-- BEGIN section -->
+    {{- partial "header.html" . -}}
+    <!-- END section -->
+  </div>
+  <div class="page">
+    <!-- BEGIN section -->
+    <section class="hero__single" style="background-image:url('../images/bg/bg-projects.png')">
+      <div class="container">
+        <h1>{{ .Title }}</h1>
+        {{- partial "_breadcrumbs.html" . -}}
+      </div>
+    </section>
+    <!-- END section -->
+
+    <!-- BEGIN section -->
+    <section class="">
+      <div class="container">
+        {{ range .Pages }}
+    {{ partial "_project-item.html" . }}
+    {{ end }}
+      </div>
+    </section>
+
+    <!-- END section -->
+
+   
+  </div>
+</main>
+<style>
+  header {
+    background-color: #000;
+  }
+</style>
+{{ end }}

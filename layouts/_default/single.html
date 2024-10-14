@@ -1,0 +1,97 @@
+{{ define "main" }}
+
+<div>
+    <!-- BEGIN section -->
+    {{- partial "header.html" . -}}
+    <!-- END section -->
+</div>
+    <!-- BEGIN section -->
+    <section class="hero__single" style="background-image:url('../../../images/bg/bg-single.png')">
+        <div class="container">
+          <h1>{{ .Title }}</h1>
+          {{- partial "_breadcrumbs.html" . -}}
+        </div>
+      </section>
+      <!-- END section -->
+<article class="page__single">
+
+    <div class="container">
+        <div class="page__container">
+            <h2 class="">
+                <!-- {{ .Title }} -->
+            </h2>
+            <!-- {{ .Content }} -->
+
+            <div class="page__demo">
+                {{ range .Params.imgs }}
+                    <img src="{{ .img | relURL }}" alt="ALT">
+                {{ end }}
+            </div>
+
+            <section class="page__desc">
+                <h2>
+                    Brief Overview:
+                </h2>
+                <div>
+                    <p class="lead">
+                        {{ .Params.lead }}
+                    </p>
+                    <div>
+                        {{ .Content }}
+                    </div>
+                </div>
+            </section>
+            <section class="page__desc">
+                <h2>
+                    Key Features:
+                </h2>
+                <div>
+                    <ul class="check">
+                        {{ range .Params.features }}
+                            <li>{{ .item }}</li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </section>
+            <section class="page__desc">
+                <h2>
+                    Technical Details:
+                </h2>
+                <div>
+                    {{ range .Params.details }}
+                        <p>{{ .item | markdownify }}</p>
+                    {{ end }}
+                </div>
+            </section>
+            <bloquote class="cite">
+                <div class="cite__ava">
+                    <img src="{{ .Params.cite.ava | relURL }}
+                    " alt="">
+                </div>
+                <div class="cite__content">
+                    <div class="cite__desc">
+                        {{  .Params.cite.desc }}
+                    </div>
+                    <div class="cite__info">
+                        <span>{{ .Params.cite.author }}</span>
+                        <span class="text--main">
+                            {{ .Params.cite.job }}
+                        </span>
+                    </div>
+                </div>
+            </bloquote>
+        </div>
+    </div>
+
+</article>
+
+<!-- BEGIN section -->
+{{- partial "_single-cta.html" . -}}
+<!-- END section -->
+
+<style>
+    header {
+        background-color: #000;
+    }
+</style>
+{{ end }}

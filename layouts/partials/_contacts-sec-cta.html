@@ -1,0 +1,39 @@
+
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.contactspage.section_cta }}
+{{ with $data.contactspage.section_cta }}
+<section class="section section--contatcs-cta">
+    <div class="container">
+        <div class="row row--1">
+            <div>
+                <hgroup>
+                    <h2 class="subtitle">{{ .suptitle }}</h2>
+                    <p class="h2">
+                        {{ .title }}
+                    </p>
+                    <p class="lead">{{ .subtitle }}</p>
+                </hgroup>
+
+                <div>
+                    <p>{{ .desc }}</p>
+                </div>
+
+                <ul class="check">
+                    {{ range .list }}
+                    <li>{{ .item }}</li>
+                    {{ end }}
+                </ul>
+
+                <p class="text--lg my-0">
+                    {{ .slogan | safeHTML }}
+                </p>
+            </div>
+            <div>
+                {{- partial "_form.html" . -}}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

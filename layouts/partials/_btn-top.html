@@ -1,0 +1,20 @@
+<button class="btn_top" title="to top">
+  <svg class="icon" width="15" height="15">
+    <use xlink:href="#arr-up"></use>
+  </svg>
+</button>
+
+<script>
+  // To Top Btn
+  const scrollToTopBtn = document.querySelector(".btn_top");
+  const rootElement = document.documentElement;
+
+  function scrollToTop() {
+    // Scroll to top logic
+    rootElement.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }
+  scrollToTopBtn.addEventListener("click", scrollToTop)
+</script>

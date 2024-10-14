@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ $lang := .Page.Lang }}
+{{ $data := index $.Site.Data }}
+
+
+<main>
+  <div>
+    <!-- BEGIN section -->
+    {{- partial "header.html" . -}}
+    <!-- END section -->
+  </div>
+  <article class="page__single">
+    <div class="hero__single">
+      <div class="container">
+        <h1>{{ .Title }}</h1>
+      </div>
+    </div>
+  
+    <div class="container">
+      {{ .Content }}
+    </div>
+  
+  </article>
+</main>
+
+
+
+{{ end }}
+

@@ -1,0 +1,50 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.section_collections }}
+{{ with $data.homepage.section_collections }}
+<section class="section section--collections">
+    <div class="container">
+
+        <div class="bg bg--3">
+            <div>
+                <img src="{{ .img | relURL }}" alt="ALT">
+            </div>
+        </div>
+
+        <div class="row row--1">
+            <div>
+                <hgroup>
+                    <h2 class="subtitle">{{ .suptitle }}</h2>
+                    <p class="h2">{{ .title }}</p>
+                    <p class="lead">{{ .subtitle }}</p>
+                </hgroup>
+                <div>
+                    <p>{{ .desc }}</p>
+                </div>
+
+                <div class="collections">
+                    {{ range .items }}
+                        <figure class="collection">
+                            <img src="{{ .img | relURL }}" alt="{{ .title }}" width="150">
+                            <figcaption class="collection__content">
+                                <h3 class="collection__title">
+                                    {{ .title }}
+                                </h3>
+                                <div>
+                                    <p>
+                                        {{ .desc }}
+                                    </p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,27 @@
+<!-- BEGIN breadcrumbs -->
+
+<section aria-label="breadcrumb" class="breadcrumb__wrap">
+	<nav class="container">
+		<ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+			{{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+		</ol>
+
+		{{ define "breadcrumbnav" }}
+		{{ if .p1.Parent }}
+		{{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )}}
+		{{ else if not .p1.IsHome }}
+		{{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )}}
+		{{ end }}
+		<li class="breadcrumbs__item {{ if eq .p1 .p2 }} breadcrumbs__item--active{{ end }}" itemprop="itemListElement"
+			itemscope itemtype="https://schema.org/ListItem">
+			<a itemprop="item" href="{{ .p1.RelPermalink }}">
+				<span itemprop="name">{{ .p1.Title | truncate 50 }}</span>
+				<meta itemprop="position" content="1" />
+			</a>
+		</li> {{ if not (eq .p1 .p2) }} › {{ end }}
+		{{ end }}
+
+		</div>
+</section>
+
+<!-- END breadcrumbs -->

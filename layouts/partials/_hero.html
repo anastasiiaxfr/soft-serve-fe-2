@@ -1,0 +1,53 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.hero }}
+{{ with $data.homepage.hero }}
+<section class="section section--hero">
+    <div class="hero container">
+        <div class="hero__container">
+            <div class="hero__row">
+                <div class="hero__col">
+                    <hgroup>
+                        <p class="subtitle">{{ .suptitle }}</p>
+                        <h1 class="h1">{{ .title | markdownify }}</h1>
+                    </hgroup>
+
+                    <a href="#" class="btn">
+                        <b><span>{{ .btn.label }}</span><span>{{ .btn.label }}</span></b>
+                    </a>
+                </div>
+                <div class="hero__col">
+                    <p class="text--main"><small>{{ .text_1 }}</small></p>
+                    <p class="h4">{{ .text_2 | safeHTML}}</p>
+                    <div class="text--main">
+                        <svg class="icon" width="48" height="48">
+                            <use xlink:href="#arr-r"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__row">
+                <div class="hero__col">
+                    <p>{{ .text_3 | safeHTML }}</p>
+                    <p class="text--main">
+                        <b>
+                            {{ .text_4 }}
+                        </b>
+                    </p>
+                    <div class="hero__soc">
+                        {{- partial "_soc.html" . -}}
+                    </div>
+                </div>
+                <div class="hero__col">
+                    <img src="./images/img1.webp" alt="ALT" height="110">
+                    <p>
+                        {{ .text_5 | markdownify }}
+                    </p>
+                    <a href="#" class="btn--link">{{ .btn_link }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

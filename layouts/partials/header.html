@@ -1,0 +1,96 @@
+<header class="header">
+	<div class="container">
+		<div class="navbar">
+			{{ .Scratch.Set "logo_h" "32" }} 
+			{{ .Scratch.Set "logo_w" "auto" }} 
+			{{- partial "_logo.html" . -}}
+	
+			<nav class="navbar__nav">
+				{{ range .Site.Menus.header }}
+				<a class="navbar__link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+				{{ end }}
+			</nav>
+	
+			<div class="navbar__btns">
+				<button class="navbar__toggler" type="button" data-toggle="collapse" data-target="#navigation">
+					<svg class="icon" width="24" height="24">
+						<use xlink:href="#menu"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<nav class="drawer">
+		<div class="drawer__container">
+			<div class="drawer__header">
+				{{ .Scratch.Set "logo_h" "29" }}
+				{{ .Scratch.Set "logo_mode" "dark" }}
+				{{- partial "_logo.html" . -}}
+
+				<button class="navbar__toggler" type="button" data-toggle="collapse" data-target="#navigation">
+					<svg class="icon" width="24" height="24">
+						<use xlink:href="#close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="drawer__content">
+
+				<nav class="drawer__nav">
+					{{ range .Site.Menus.header }}
+					<a href="{{ .URL }}" target="_self">
+						<span>
+							{{ if .Pre }}
+							<svg class="icon" width="14" height="14">
+								<use xlink:href="#{{ .Pre }}"></use>
+							</svg>
+							{{ end }}
+
+							{{ .Name }}
+						</span>
+						<svg class="icon" width="16" height="16">
+							<use xlink:href="#arr-btm-rt"></use>
+						</svg>
+					</a>
+					{{ end }}
+				</nav>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<script>
+	// Nav
+	const nav_toggle = document.querySelectorAll('.navbar__toggler');
+	const nav = document.querySelector('.drawer');
+	const link = document.querySelectorAll('.drawer__nav a');
+
+	// Обработчик клика для всех кнопок .navbar-toggler
+	nav_toggle.forEach(function (el) {
+		el.addEventListener('click', function (event) {
+			nav.classList.toggle('show');
+			this.classList.toggle('active');
+			event.stopPropagation(); // Останавливаем распространение события
+		});
+	});
+
+	link.forEach(function (el) {
+		el.addEventListener('click', function () {
+			nav.classList.remove('show');
+		})
+	})
+
+	document.addEventListener('click', function (event) {
+		const target = event.target;
+
+		// Проверяем, был ли клик вне области меню и кнопок
+		const clickedOutsideNavToggle = !Array.from(nav_toggle).some(toggle => toggle.contains(target));
+
+		if (!nav.contains(target) && clickedOutsideNavToggle) {
+			nav.classList.remove('show');
+			nav_toggle.forEach(function (el) {
+				el.classList.remove('active');
+			});
+		}
+	});
+</script>

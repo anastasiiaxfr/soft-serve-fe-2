@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{ $lang := .Page.Lang }}
+{{ $data := index $.Site.Data }}
+
+
+<div>
+  <!-- BEGIN section -->
+  {{- partial "header.html" . -}}
+  {{ .Scratch.Set "title" .Params.title }}
+  {{ .Scratch.Set "subtitle" .Params.sub_title }}
+  {{ .Scratch.Set "search" true }}
+  <!-- END section -->
+</div>
+<article class="page__single">
+
+  <div class="container">
+    {{ if .Params.heading }}
+      <h2 class="page__title">{{ .Params.heading }}</h2>
+    {{ end }}
+
+    <div class="page__row">
+      {{ range .Data.Pages }}
+      <a class="card-line" href="{{ .Permalink }}">
+        <h3 class="card-line__title">{{ .Title | truncate 250 }}</h3>
+        <svg class="icon" width="24" height="24">
+          <use xlink:href="#arr"></use>
+        </svg>
+      </a>
+      {{ end }}
+    </div>
+
+    <section class="">
+      <div class="container">
+        {{ .Content }}
+      </div>
+    </section>
+
+  </div>
+
+</article>
+
+{{ end }}
+
+
