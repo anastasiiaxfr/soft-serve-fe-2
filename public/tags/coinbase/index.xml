@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coinbase on Home</title>
-    <link>//localhost:53647/tags/coinbase/</link>
+    <link>//localhost:51637/tags/coinbase/</link>
     <description>Recent content in Coinbase on Home</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 22 Feb 2023 14:29:08 +0200</lastBuildDate>
-    <atom:link href="//localhost:53647/tags/coinbase/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:51637/tags/coinbase/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coinbase Global, оператор крупнейшей в США криптовалютной биржи, завершил четвертый квартал с чистым убытком, в том числе из-за значительного снижения объема торгов.</title>
-      <link>//localhost:53647/news/articles-2023-02-22-12-54/</link>
+      <link>//localhost:51637/news/articles-2023-02-22-12-54/</link>
       <pubDate>Wed, 22 Feb 2023 14:29:08 +0200</pubDate>
-      <guid>//localhost:53647/news/articles-2023-02-22-12-54/</guid>
+      <guid>//localhost:51637/news/articles-2023-02-22-12-54/</guid>
       <description>Как сообщается в пресс-релизе компании, чистый убыток в октябре-декабре составил $557 млн, или $2,46 в расчете на акцию, по сравнению с чистой прибылью в размере $840 млн, или $3,32 на акцию, за аналогичный период предыдущего года.&#xA;Выручка обвалилась до $629 млн против $2,49 млрд годом ранее. Объем торгов упал до $145 млрд с $547 млрд.</description>
     </item>
   </channel>

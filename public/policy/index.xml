@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Privacy Policy on Home</title>
-    <link>//localhost:53647/policy/</link>
+    <link>//localhost:51637/policy/</link>
     <description>Recent content in Privacy Policy on Home</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="//localhost:53647/policy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:51637/policy/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

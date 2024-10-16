@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contacts on Home</title>
-    <link>//localhost:53647/contacts/</link>
+    <link>//localhost:51637/contacts/</link>
     <description>Recent content in Contacts on Home</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="//localhost:53647/contacts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:51637/contacts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

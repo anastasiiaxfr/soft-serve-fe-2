@@ -10,7 +10,7 @@
   </div>
   <div class="page">
     <!-- BEGIN section -->
-    <section class="hero__single" style="background-image:url('../images/bg/bg-projects.png')">
+    <section class="hero__single" style="background-image:url('../images/bg/bg-projects.webp')">
       <div class="container">
         <h1>{{ .Title }}</h1>
         {{- partial "_breadcrumbs.html" . -}}
@@ -21,7 +21,7 @@
     <!-- BEGIN section -->
     <section class="">
       <div class="container">
-        {{ range .Pages }}
+    {{ range .Pages }}
     {{ partial "_project-item.html" . }}
     {{ end }}
       </div>
